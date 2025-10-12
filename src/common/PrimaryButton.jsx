@@ -12,7 +12,7 @@ export default function PrimaryButton({
   return (
     <Link
       to={to}
-      className={`bg-yellow-400 text-black text-sm px-4 py-3 flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 transition ${className}`}
+      className={`bg-yellow-400 duration-500 text-black text-sm px-4 py-3 flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 transition ${className}`}
       {...props}
     >
       {children}

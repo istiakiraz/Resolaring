@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 const Counter = () => {
   return (
-    <div className="text-center mt-20 ">
+    <div className="text-center my-20 ">
       <h2 className=" mb-10 text-3xl font-semibold">Buy, Sell and Recycle</h2>
       <div className="flex justify-center  px-5 place-content-center  space-x-20">
         
@@ -14,6 +14,7 @@ const Counter = () => {
             end={379}
             duration={2.5}
             suffix=" GW"
+            enableScrollSpy
             className="lg:text-5xl text-[#B45C3D] font-bold"
           />
           <p className="text-xs text-gray-600 mt-2">
@@ -27,6 +28,7 @@ const Counter = () => {
             start={0}
             end={78}
             duration={2.5}
+            enableScrollSpy
             suffix=" million tons"
             className="lg:text-5xl text-[#B45C3D] font-bold"
           />
@@ -42,6 +44,7 @@ const Counter = () => {
             end={25}
             duration={2.5}
             suffix=" Years"
+            enableScrollSpy
             className="lg:text-5xl text-[#B45C3D] font-bold"
           />
           <p className="text-xs text-gray-600 mt-2">

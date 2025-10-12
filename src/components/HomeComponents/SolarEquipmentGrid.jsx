@@ -1,5 +1,6 @@
 import React from "react";
-import PrimaryButton from "../../../common/PrimaryButton";
+import PrimaryButton from "../../common/PrimaryButton";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const products = [
   {
@@ -101,19 +102,19 @@ export default function SolarEquipmentGrid() {
             </div>
             <div className="mt-4 flex items-center px-4 gap-2 text-sm text-gray-600">
               <span>{product.author}</span>
-              <span className="ml-auto text-yellow-500">★ {product.rating} ({product.reviews})</span>
+              <span className="ml-auto text-yellow-500">★ <span className="text-black" >{product.rating}</span> <span className="text-gray-500">({product.reviews})</span></span>
             </div>
             <h3 className="font-semibold text-2xl px-4 mt-2">{product.title}</h3>
            <div className="flex items-center px-4 justify-between">
-            <span > <p className="font-light text-gray-500 px-4 mt-2">Tex</p>
+            <span > <p className="font-light text-sm text-gray-500 mt-2">Tax excluded</p>
             <p className="text-gray-800 text-2xl font-bold">{product.price}</p></span>
             <button className="mt-3  border border-black rounded-full py-2 px-2 text-sm font-medium hover:bg-secondary hover:border-secondary cursor-pointer duration-500 ">View Details</button>
            </div>
           </div>
         ))}
       </div>
-      <div className="text-center  mt-8">
-        <PrimaryButton className="w-fit">
+      <div className=" flex justify-center  mt-8">
+        <PrimaryButton to="/products" icon={FaArrowRightLong}>
             View all products 
         </PrimaryButton>
       </div>

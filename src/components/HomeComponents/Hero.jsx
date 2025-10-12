@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import heroImg from '../../../assets/Img/HeroImg.svg'
-import PrimaryButton from "../../../common/PrimaryButton";
+import heroImg from '../../assets/Img/HeroImg.svg'
+import PrimaryButton from "../../common/PrimaryButton";
 import { FaArrowRightLong } from "react-icons/fa6";
-import SecondaryButton from "../../../common/SecondaryButton";
+import SecondaryButton from "../../common/SecondaryButton";
 
 export default function Hero() {
   return (
@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 lg:w-5/12 lg:mr-auto lg:pl-20  text-center md:text-left">
+      <div className="relative z-10 lg:w-6/12 lg:mr-auto lg:pl-20  text-center md:text-left">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
           Empowering Sustainability 
           Through Solar Recycling
