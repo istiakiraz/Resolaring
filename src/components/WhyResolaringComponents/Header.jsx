@@ -17,7 +17,7 @@ export default function Header() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10   text-center md:text-left">
+      <div className="relative z-10 w-9/12   text-center md:text-left">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
          Reusing solar energy
         </h1>

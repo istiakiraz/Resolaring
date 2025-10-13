@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../src/components/svg/footerLogo.svg'
+import logo from '../components/svg/footerLogo.svg'
 import { Link } from 'react-router'
 import { TfiWorld } from 'react-icons/tfi'
 import { BsTwitterX } from 'react-icons/bs'
@@ -8,7 +8,6 @@ import { FaArrowRightLong, FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-ic
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import PrimaryButton from '../common/PrimaryButton'
 
 export default function Footer() {

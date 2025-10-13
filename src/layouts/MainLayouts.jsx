@@ -10,7 +10,7 @@ export default function MainLayouts() {
 
       <TopBar></TopBar>
 
-      <nav>
+      <nav className='sticky top-0 z-50' >
         <Navbar></Navbar>
       </nav>
       <main  >
