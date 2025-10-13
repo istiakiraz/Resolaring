@@ -22,7 +22,7 @@ const Counter = () => {
           </p>
         </div>
 
-        {/* Second Counter */}
+        {/* second counter */}
         <div className='border-r-2 lg:p-10 border-r-gray-100'>
           <CountUp
             start={0}
@@ -37,7 +37,7 @@ const Counter = () => {
           </p>
         </div>
 
-        {/* Third Counter */}
+        {/* third counter */}
         <div className='lg:p-10 p-2'>
           <CountUp
             start={0}

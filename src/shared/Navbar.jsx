@@ -53,7 +53,7 @@ export default function Navbar() {
           </PrimaryButton>
 
           <Link
-            to="/login"
+            to="/auth/choose-account"
             className="flex items-center border border-gray-300 px-3 gap-2 py-3 rounded-full text-sm hover:bg-gray-100 transition"
           >
             Login
@@ -105,7 +105,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              to="/login"
+              to="/auth//choose-account"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center border border-gray-300 px-3 py-2 rounded-full text-sm hover:bg-gray-100 transition"
             >

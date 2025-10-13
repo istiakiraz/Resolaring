@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import WhyResolaring from "../pages/WhyResolaringPage/WhyResolaring";
 import RecyclingProcess from "../pages/RecyclingProcessPage/RecyclingProcess";
 import Marketplace from "../pages/ProductPages/Marketplace";
+import AuthLayouts from "../layouts/AuthLayouts";
+import ChooseAccount from "../pages/AuthPages/ChooseAccount";
 
 export const router = createBrowserRouter([
 
@@ -23,19 +25,32 @@ export const router = createBrowserRouter([
                 Component: Home
             },
             {
-                path: '/why-resolaring',
+                path: 'why-resolaring',
                 Component: WhyResolaring
             },
             {
-                path: '/recycling-process',
+                path: 'recycling-process',
                 Component: RecyclingProcess
             },
             {
-                path: '/marketplace',
+                path: 'marketplace',
                 Component: Marketplace
             },
 
         ]
+        
+    },
+    
+    {
+        path: '/auth',
+        Component: AuthLayouts,
+        children:[
+            {
+                path: "choose-account",
+                Component: ChooseAccount,
+            }
+        ]
+
         
     }
 ])

@@ -6,25 +6,26 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
+    id:1,
     img: "https://i.ibb.co.com/NnFvP6R0/young-handsome-business-man-choosing-car-car-showroom-1.png",
     text: `I went through tax season last year with a US based Tax person that I have been using for years. He could not answer my questions pertaining to my expat status and I was lucky enough, yes, lucky enough to have a friend down here steer me to Randall Brady and his very competent team of tax specialists. Every question was met...`,
     name: "Jared Woods",
     role: "Solar Installer"
   },
-  {
+  { id:2,
     img: "https://i.ibb.co.com/xqhSpk1S/business-man-banner-concept-with-copy-space-1.png",
     text: `I went through tax season last year with a US based Tax person that I have been using for years. He could not answer my questions pertaining to my expat status and I was lucky enough, yes, lucky enough to have a friend down here steer me to Randall Brady and his very competent team...`,
     name: "Jared Woods",
     role: "Solar Installer"
   },
   
-  {
+  { id:3,
     img: "https://i.ibb.co.com/xqhSpk1S/business-man-banner-concept-with-copy-space-1.png",
     text: `I went through tax season last year with a US based Tax person that I have been using for years. He could not answer my questions pertaining to my expat status and I was lucky enough, yes, lucky enough to have a friend down here steer me to Randall Brady and his very competent team...`,
     name: "Jared Woods",
     role: "Solar Installer"
   },
-   {
+   { id:4,
     img: "https://i.ibb.co.com/NnFvP6R0/young-handsome-business-man-choosing-car-car-showroom-1.png",
     text: `I went through tax season last year with a US based Tax person that I have been using for years. He could not answer my questions pertaining to my expat status and I was lucky enough, yes, lucky enough to have a friend down here steer me to Randall Brady and his very competent team of tax specialists. Every question was met...`,
     name: "Jared Woods",
@@ -44,8 +45,8 @@ export default function ClientReview() {
 
         <Carousel className="w-full">
           <CarouselContent className="-ml-2 md:-ml-4">
-            {reviews.map((review, idx) => (
-              <CarouselItem key={idx} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/2">
+            {reviews.map((review) => (
+              <CarouselItem key={review.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/2">
                 <Card className=" rounded-xl border-4 border-white bg-yellow-50/90">
                   <CardContent className="p-6 flex gap-6">
                     
