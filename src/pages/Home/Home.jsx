@@ -13,7 +13,7 @@ import Cta from '../../components/HomeComponents/Cta'
 export default function Home() {
   return (
     <div>
-      <Hero></Hero>
+      <Hero/>
       <Counter></Counter>
       <SolarEquipmentGrid></SolarEquipmentGrid>
       <Faq></Faq>
