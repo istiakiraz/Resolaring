@@ -6,6 +6,7 @@ import { Menu, X, LogIn } from 'lucide-react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { CgProfile } from 'react-icons/cg';
 import PrimaryButton from '../common/PrimaryButton';
+import logo from '../../public/logo.png'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Navbar() {
         <Link to="/" className="flex flex-col items-start space-y-2">
 
           <div className='flex items-center gap-2'>
-            <img src="../../public/logo.png" alt="Resolaring Logo" className="h-8 w-auto" />
+            <img src={logo} alt="Resolaring Logo" className="h-10 w-auto" />
             <span className="text-4xl font-semibold text-gray-900">Resolaring</span>
           </div>
           <p className="text-[11px] text-gray-500 leading-none">Recycling and installing panels for a better future</p>
