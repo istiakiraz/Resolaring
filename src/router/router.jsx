@@ -1,6 +1,7 @@
 import { createBrowserRouter, Link } from "react-router";
 import MainLayouts from "../layouts/Mainlayouts";
 import Home from "../pages/Home/Home";
+import WhyResolaring from "../pages/WhyResolaring";
 
 export const router = createBrowserRouter([
 
@@ -19,6 +20,11 @@ export const router = createBrowserRouter([
                 index: true,
                 Component: Home
             },
+            {
+                path: '/why-resolaring',
+                Component: WhyResolaring
+            },
+
         ]
         
     }

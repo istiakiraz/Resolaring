@@ -18,7 +18,7 @@ export default function Faq() {
       <div className='grid grid-cols-4 gap-10'>
 
         <div
-          className="bg-cover hover:scale-105 hover:shadow-2xl duration-600 cursor-grab ease-in-out bg-center bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
+          className="bg-cover hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-center bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
           style={{ backgroundImage: `url(${frame1})` }}
         >
           <img src={svg1} alt="svg img" />
@@ -27,7 +27,7 @@ export default function Faq() {
         </div>
 
         <div
-          className="bg-cover bg-center hover:scale-105 hover:shadow-2xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
+          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
           style={{ backgroundImage: `url(${frame2})` }}
         >
           <img src={svg2} alt="svg img" />
@@ -36,7 +36,7 @@ export default function Faq() {
         </div>
 
         <div
-          className="bg-cover bg-center hover:scale-105 hover:shadow-2xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
+          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
           style={{ backgroundImage: `url(${frame3})` }}
         >
           <img src={svg3} alt="svg img" />
@@ -45,7 +45,7 @@ export default function Faq() {
         </div>
 
         <div
-          className="bg-cover bg-center hover:scale-105 hover:shadow-2xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
+          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
           style={{ backgroundImage: `url(${frame4})` }}
         >
           <img src={svg4} alt="svg img" />
