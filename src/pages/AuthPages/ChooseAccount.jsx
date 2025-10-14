@@ -1,13 +1,15 @@
 import React from 'react'
 import PrimaryButton from '../../common/PrimaryButton'
 
+
 export default function ChooseAccount() {
   return (
     <div className='space-y-3  items-center'>
 
-           <h1 className='text-2xl font-semibold'>Choose account</h1>
-           <PrimaryButton className=' px-30 ' >Buyer</PrimaryButton>
-           <PrimaryButton className='px-30' >Seller</PrimaryButton>
+      <h1 className='text-5xl mb-4 font-semibold'>Choose account</h1>
+
+      <PrimaryButton to='/auth/log-in' className=' px-40 ' >Buyer</PrimaryButton>
+      <PrimaryButton to='/auth/log-in' className='px-40' >Seller</PrimaryButton>
 
     </div>
   )

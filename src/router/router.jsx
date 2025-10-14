@@ -6,6 +6,7 @@ import RecyclingProcess from "../pages/RecyclingProcessPage/RecyclingProcess";
 import Marketplace from "../pages/ProductPages/Marketplace";
 import AuthLayouts from "../layouts/AuthLayouts";
 import ChooseAccount from "../pages/AuthPages/ChooseAccount";
+import LogIn from "../pages/AuthPages/LogIn";
 
 export const router = createBrowserRouter([
 
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
             {
                 path: "choose-account",
                 Component: ChooseAccount,
+            },
+            {
+                path:'log-in',
+                Component: LogIn
             }
         ]
 
