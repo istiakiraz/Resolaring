@@ -7,6 +7,8 @@ import Marketplace from "../pages/ProductPages/Marketplace";
 import AuthLayouts from "../layouts/AuthLayouts";
 import ChooseAccount from "../pages/AuthPages/ChooseAccount";
 import LogIn from "../pages/AuthPages/LogIn";
+import ForgotPass from "../pages/AuthPages/ForgotPass";
+import Verification from "../pages/AuthPages/Verification";
 
 export const router = createBrowserRouter([
 
@@ -53,7 +55,15 @@ export const router = createBrowserRouter([
             {
                 path:'log-in',
                 Component: LogIn
-            }
+            },
+            {
+                path:'forgot-pass',
+                Component: ForgotPass
+            },
+            {
+                path:'verification',
+                Component: Verification
+            },
         ]
 
         

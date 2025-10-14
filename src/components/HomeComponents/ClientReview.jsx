@@ -43,7 +43,11 @@ export default function ClientReview() {
       <div className=" 2xl:max-w-9/12 max-w-11/12 mx-auto px-4">
         <h2 className="text-4xl font-bold text-left mb-10">What Our Users Say</h2>
 
-        <Carousel className="w-full">
+        <Carousel
+        opts={{
+          align: "start"
+        }}
+        className="w-full">
           <CarouselContent className="-ml-2 md:-ml-4">
             {reviews.map((review) => (
               <CarouselItem key={review.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/2">
