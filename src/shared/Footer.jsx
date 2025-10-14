@@ -12,14 +12,14 @@ import PrimaryButton from '../common/PrimaryButton'
 
 export default function Footer() {
 
-  const inputStyles = "bg-[#273a5a] border border-slate-700 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500 rounded-md";
+  const inputStyles = "bg-[#273a5a] border border-slate-700 text-white placeholder:text-slate-400 focus:outline-secondary  rounded-md";
   return (
     <section className='bg-primary text-white py-20' >
 
       <div className='2xl:max-w-9/12 flex  items-start gap-10 max-w-11/12 mx-auto '>
 
         <div className='w-4/12'>
-          {/* Logo */}
+          {/* logo */}
           <Link to="/" className="flex flex-col items-start space-y-2">
 
             <div className='flex items-center gap-2'>
@@ -80,7 +80,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="/fors"
+                href="/recycling-process"
                 className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
                 The Recycling Process
@@ -88,7 +88,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="/be"
+                href="/marketplace"
                 className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
                 Panels
@@ -96,7 +96,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="/b"
+                href="/gallery"
                 className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
                 Shared Gallery

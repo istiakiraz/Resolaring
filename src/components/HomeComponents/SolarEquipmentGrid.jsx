@@ -114,7 +114,7 @@ export default function SolarEquipmentGrid() {
         ))}
       </div>
       <div className=" flex justify-center  mt-8">
-        <PrimaryButton to="/products" icon={FaArrowRightLong}>
+        <PrimaryButton to="/marketplace" icon={FaArrowRightLong}>
             View all products 
         </PrimaryButton>
       </div>

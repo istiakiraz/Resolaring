@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import { Menu, X, LogIn } from 'lucide-react';
@@ -53,7 +51,7 @@ export default function Navbar() {
           </PrimaryButton>
 
           <Link
-            to="/auth/choose-account"
+            to="/auth/log-in"
             className="flex items-center border border-gray-300 px-3 gap-2 py-3 rounded-full text-sm hover:bg-gray-100 transition"
           >
             Login
@@ -105,7 +103,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              to="/auth//choose-account"
+              to="/auth/log-in"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center border border-gray-300 px-3 py-2 rounded-full text-sm hover:bg-gray-100 transition"
             >

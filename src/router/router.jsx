@@ -11,6 +11,7 @@ import ForgotPass from "../pages/AuthPages/ForgotPass";
 import Verification from "../pages/AuthPages/Verification";
 import NewPass from "../pages/AuthPages/NewPass";
 import SignUp from "../pages/AuthPages/SignUp";
+import SharedGallery from "../pages/SharedGalleryPage/SharedGallery";
 
 export const router = createBrowserRouter([
 
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
             {
                 path: 'marketplace',
                 Component: Marketplace
+            },
+            {
+                path: 'gallery',
+                Component: SharedGallery
             },
 
         ]
