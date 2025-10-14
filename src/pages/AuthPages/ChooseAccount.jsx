@@ -6,8 +6,8 @@ export default function ChooseAccount() {
     <div className='space-y-3  items-center'>
 
            <h1 className='text-2xl font-semibold'>Choose account</h1>
-           <PrimaryButton className='w-96  ' >Buyer</PrimaryButton>
-           <PrimaryButton className='w-96' >Seller</PrimaryButton>
+           <PrimaryButton className=' px-30 ' >Buyer</PrimaryButton>
+           <PrimaryButton className='px-30' >Seller</PrimaryButton>
 
     </div>
   )
