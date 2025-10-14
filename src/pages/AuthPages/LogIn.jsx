@@ -129,7 +129,7 @@ export default function LogIn() {
 
             <SocialLog></SocialLog>
 
-            <p className='text-center mt-2'>Don’t have an account?  <Link><span className='text-red-700'>Sign Up</span></Link></p>
+            <p className='text-center mt-2'>Don’t have an account?  <Link to='/auth/sign-up' ><span className='text-red-700'>Sign Up</span></Link></p>
 
         </div>
     )

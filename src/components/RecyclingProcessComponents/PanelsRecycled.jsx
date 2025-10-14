@@ -57,7 +57,7 @@ export default function PanelsRecycled() {
             </div>
           ))}
 
-          {/* CTA CARD */}
+          {/* CTA*/}
           <div className="bg-yellow-100 rounded-lg text-center flex flex-col bg-cover bg-center justify-center items-center p-8"
            style={{ backgroundImage: `url(${bgImg})` }}
           >

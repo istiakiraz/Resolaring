@@ -70,7 +70,7 @@ export default function ClientReview() {
           </CarouselContent>
 
           <CarouselPrevious className="-top-15 left-330 text-white text-2xl hover:bg-secondary cursor-pointer duration-300 ease-in-out  bg-white/5" />
-          <CarouselNext className=" -top-15 right-0 border-none bg-yellow-400 hover:bg-yellow-500 text-black" />
+          <CarouselNext className=" -top-15 right-0 border-none bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-black" />
         </Carousel>
       </div>
     </div>
