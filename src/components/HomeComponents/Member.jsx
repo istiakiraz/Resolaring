@@ -1,9 +1,15 @@
 import React from 'react'
 import manImg from '../svg/manImg.svg'
+import bgSvg from '../svg/star-svg.svg'
 
 export default function Member() {
     return (
-        <div>
+        <div className='relative overflow-hidden' >
+
+             <img className="absolute top-10  left-2 z-1" src={bgSvg} alt="bg svg" />
+                   <img className="absolute bottom-10  right-2 z-1" src={bgSvg} alt="bg svg" />
+
+
 
             <section className='2xl:max-w-9/12 py-20  max-w-11/12 mx-auto' >
                 <h2 className='text-4xl font-bold mb-6 text-left'>Our Expert Member</h2>

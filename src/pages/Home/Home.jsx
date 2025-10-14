@@ -8,14 +8,18 @@ import Member from '../../components/HomeComponents/Member'
 import Benefits from '../../components/HomeComponents/Benefits'
 import ClientReview from '../../components/HomeComponents/ClientReview'
 import Cta from '../../components/HomeComponents/Cta'
+import { useLoaderData } from 'react-router'
 
 
 export default function Home() {
+
+  const data = useLoaderData()
+
   return (
     <div>
       <Hero/>
       <Counter></Counter>
-      <SolarEquipmentGrid></SolarEquipmentGrid>
+      <SolarEquipmentGrid products={data}  ></SolarEquipmentGrid>
       <Faq></Faq>
       <Work></Work>
       <Member></Member>

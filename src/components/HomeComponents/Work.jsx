@@ -6,12 +6,21 @@ import svg3 from '../svg/svg3.svg'
 import svg4 from '../svg/svg4.svg'
 import PrimaryButton from '../../common/PrimaryButton'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import circleSvg from '../svg/circle-svg.svg'
 
 export default function Work() {
+
+
+
   return (
-    <div className='bg-primary-foreground' >
+    <div className='bg-primary-foreground overflow-hidden  relative  ' >
+
+         <img className="absolute  size-220  -right-100 z-1" src={circleSvg} alt="circle svg" />
+
+
+
         
-        <section className='2xl:max-w-9/12 py-20 flex items-center gap-10 max-w-11/12 mx-auto' >
+        <section className='2xl:max-w-9/12 py-20 relative z-10 flex items-center gap-10 max-w-11/12 mx-auto' >
 
         <img className='rounded-2xl' src={workImg} alt="worker img" />
 

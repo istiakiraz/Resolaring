@@ -23,9 +23,7 @@ export default function LogIn() {
             navigate("/");
         }
     }
-
-   
-
+  
     useEffect(() => {
         if (errors.email) {
             setFocus("email");

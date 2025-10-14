@@ -7,11 +7,21 @@ import svg1 from '../../assets/Img/svg1.png'
 import svg2 from '../../assets/Img/svg2.png'
 import svg3 from '../../assets/Img/svg3.png'
 import svg4 from '../../assets/Img/svg4.png'
+import bgSvg from '../svg/home-bg-svg-2.svg'
 
 
 export default function Faq() {
   return (
-    <div className='2xl:max-w-9/12 max-w-11/12 mx-auto my-20'>
+    <section className='relative overflow-hidden '>
+
+       <img className="absolute top-10  left-2 z-1" src={bgSvg} alt="bg svg" />
+       <img className="absolute bottom-10  right-2 z-1" src={bgSvg} alt="bg svg" />
+
+      <div className='2xl:max-w-9/12 max-w-11/12 mx-auto my-20'>
+
+      
+
+
 
       <h2 className="text-4xl font-bold mb-6 text-center">Why Choose Resolaring?</h2>
 
@@ -54,9 +64,9 @@ export default function Faq() {
         </div>
 
        
-       
       </div>
 
     </div>
+    </section>
   );
 }

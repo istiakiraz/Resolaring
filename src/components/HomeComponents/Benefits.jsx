@@ -5,12 +5,19 @@ import frame3 from '../../assets/Img/4.png'
 import svg1 from '../svg/Group.svg'
 import svg2 from '../svg/Group (1).svg'
 import svg3 from '../svg/Group (2).svg'
+import bgSvg from '../svg/home-bg-svg-2.svg'
+import circleSvg from '../svg/circle-svg.svg'
 
 
 export default function Benefits() {
     return (
-        <section className='bg-primary-foreground' >
-            <div className='2xl:max-w-9/12 max-w-11/12 mx-auto py-20'>
+        <section className='bg-primary-foreground py-20 relative overflow-hidden' >
+
+            <img className="absolute  bottom-10  left-2 z-1" src={bgSvg} alt="bg svg" />
+            <img className="absolute  top-10 right-2 z-1" src={bgSvg} alt="bg svg" />
+            <img className="absolute  size-200 -top-22 right-125 z-1" src={circleSvg} alt="bg svg" />
+
+            <div className='2xl:max-w-9/12 relative z-10 max-w-11/12 mx-auto py-20'>
 
                 <h2 className="text-4xl font-bold mb-6 text-center">Benefits of Joining the Solar Revolution</h2>
 
