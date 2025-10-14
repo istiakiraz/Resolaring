@@ -12,7 +12,7 @@ export default function ForgotPass() {
     const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
 
         if (data.email) {
             navigate("/auth/verification");

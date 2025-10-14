@@ -9,6 +9,7 @@ import ChooseAccount from "../pages/AuthPages/ChooseAccount";
 import LogIn from "../pages/AuthPages/LogIn";
 import ForgotPass from "../pages/AuthPages/ForgotPass";
 import Verification from "../pages/AuthPages/Verification";
+import NewPass from "../pages/AuthPages/NewPass";
 
 export const router = createBrowserRouter([
 
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
             {
                 path:'verification',
                 Component: Verification
+            },
+            {
+                path:'set-new-pass',
+                Component: NewPass
             },
         ]
 

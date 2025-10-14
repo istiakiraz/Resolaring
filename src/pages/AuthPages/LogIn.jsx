@@ -17,7 +17,7 @@ export default function LogIn() {
     const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
 
         if (data.email && data.password) {
             navigate("/");
