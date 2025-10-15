@@ -51,6 +51,7 @@ export default function Product({allProducts}) {
             </div>
 
             <div className="flex items-start justify-between gap-10">
+                
                 {/* sidebar */}
                 <div className="space-y-10 sticky top-30 z-40">
                     {/* manufacturer */}

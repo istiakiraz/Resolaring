@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "JA Solar 200W",
+    "price": "55,00 €",
+    "rating": 4.5,
+    "reviews": 158,
+    "image": "https://i.ibb.co.com/y9dyhH7/image.png",
+    "discount": "-15% Discount",
+    "author": "John Doe",
+    "manufacturer": "Canadian Solar",
+    "type": "Polycrystalline",
+    "details": "The JA Solar 200W panel offers high efficiency and durability for residential and commercial installations. With its polycrystalline cells, it provides stable performance in diverse weather conditions."
+  },
+  {
+    "id": 2,
+    "title": "JA Solar 250W",
+    "price": "65,00 €",
+    "rating": 4.7,
+    "reviews": 210,
+    "image": "https://i.ibb.co.com/bg08cCWd/image-2.png",
+    "discount": "-10% Discount",
+    "author": "John Doe",
+    "manufacturer": "Trina Solar",
+    "type": "Monocrystalline",
+    "details": "The JA Solar 250W monocrystalline panel ensures maximum energy output and excellent performance under low-light environments. Ideal for both residential rooftops and industrial setups."
+  },
+  {
+    "id": 3,
+    "title": "JA Solar 180W",
+    "price": "45,00 €",
+    "rating": 4.3,
+    "reviews": 134,
+    "image": "https://i.ibb.co.com/nqHHdhQZ/image-1.png",
+    "discount": "-20% Discount",
+    "author": "John Doe",
+    "manufacturer": "LONGi Solar",
+    "type": "Polycrystalline",
+    "details": "JA Solar 180W offers affordable power with long-term reliability. It is designed with advanced cell technology that enhances performance even on cloudy days."
+  },
+  {
+    "id": 4,
+    "title": "JA Solar 220W",
+    "price": "58,00 €",
+    "rating": 4.6,
+    "reviews": 176,
+    "image": "https://i.ibb.co.com/y9dyhH7/image.png",
+    "author": "John Doe",
+    "manufacturer": "JA Solar",
+    "type": "Monocrystalline",
+    "details": "JA Solar 220W monocrystalline module provides superior efficiency and consistent performance, perfect for both small-scale and large-scale solar projects."
+  },
+  {
+    "id": 5,
+    "title": "JA Solar 300W",
+    "price": "75,00 €",
+    "rating": 4.8,
+    "reviews": 250,
+    "image": "https://i.ibb.co.com/bg08cCWd/image-2.png",
+    "discount": "-5% Discount",
+    "author": "John Doe",
+    "manufacturer": "Canadian Solar",
+    "type": "Thin Film",
+    "details": "The JA Solar 300W thin film panel combines cutting-edge design and advanced cell technology to deliver superior performance with minimal maintenance needs."
+  },
+  {
+    "id": 6,
+    "title": "JA Solar 150W",
+    "price": "20,00 €",
+    "rating": 4.2,
+    "reviews": 120,
+    "image": "https://i.ibb.co.com/nqHHdhQZ/image-1.png",
+    "author": "John Doe",
+    "manufacturer": "Trina Solar",
+    "type": "Thin Film",
+    "details": "JA Solar 150W thin film panel is an affordable and efficient choice for small-scale solar systems. It offers good performance with low degradation over time."
+  },
+  {
+    "id": 7,
+    "title": "FF Solar 150W",
+    "price": "90,00 €",
+    "rating": 4.2,
+    "reviews": 120,
+    "image": "https://i.ibb.co.com/nqHHdhQZ/image-1.png",
+    "author": "John Doe",
+    "manufacturer": "Trina Solar",
+    "type": "Thin Film",
+    "details": "FF Solar 150W panel is built for high reliability and designed to deliver consistent output across a wide range of climates and applications."
+  },
+  {
+    "id": 8,
+    "title": "JA Solar 150W",
+    "price": "70,00 €",
+    "rating": 4.2,
+    "reviews": 120,
+    "image": "https://i.ibb.co.com/nqHHdhQZ/image-1.png",
+    "author": "John Doe",
+    "manufacturer": "Trina Solar",
+    "type": "Thin Film",
+    "details": "JA Solar 150W panel provides excellent energy conversion efficiency and durability, suitable for small residential or portable solar applications."
+  }
+]

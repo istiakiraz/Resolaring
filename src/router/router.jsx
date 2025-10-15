@@ -13,6 +13,7 @@ import NewPass from "../pages/AuthPages/NewPass";
 import SignUp from "../pages/AuthPages/SignUp";
 import SharedGallery from "../pages/SharedGalleryPage/SharedGallery";
 import ProductDetails from "../pages/ProductDetailsPage/ProductDetails";
+import GalleryProduct from "../components/SharedGalleryComponents/GalleryProduct";
 
 export const router = createBrowserRouter([
 
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home,
-                loader: () => fetch("/public/products.json"),
+                loader: () => fetch("/products.json"),
             },
             {
                 path: 'why-resolaring',
@@ -43,17 +44,22 @@ export const router = createBrowserRouter([
             {
                 path: 'marketplace',
                 Component: Marketplace,
-                loader: () => fetch("/public/products.json"),
+                loader: () => fetch("/products.json"),
             },
             {
                 path: 'product-details/:id',
                 Component: ProductDetails,
-                loader: () => fetch("/public/products.json"),
+                loader: () => fetch("/products.json"),
             },
             {
                 path: 'gallery',
                 Component: SharedGallery,
-                loader: () => fetch("/public/products.json"),
+                loader: () => fetch("/solarProducts.json"),
+            },
+            {
+                path: 'gallery-product/:id',
+                Component: GalleryProduct,
+                loader: () => fetch("/solarProducts.json"),
             },
 
         ]

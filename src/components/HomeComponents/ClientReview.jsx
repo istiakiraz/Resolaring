@@ -58,7 +58,7 @@ export default function ClientReview() {
                       <div className="flex text-yellow-500 mb-2">
                         {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-500" />)}
                       </div>
-                      <p className=" text-gray-600">{review.text} <span className="text-secondary cursor-pointer">See More</span></p>
+                      <p className=" text-gray-600 select-none ">{review.text} <span className="text-secondary cursor-pointer">See More</span></p>
                       <p className="mt-3 text-[#B45C3D] font-semibold">— {review.name}</p>
                       <p className="text-sm text-gray-500">{review.role}</p>
                     </div>

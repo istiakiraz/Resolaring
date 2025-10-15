@@ -1,6 +1,8 @@
 import React from 'react'
 import manImg from '../svg/manImg.svg'
 import bgSvg from '../svg/star-svg.svg'
+import { FaLinkedinIn, FaShareNodes, FaSkype } from 'react-icons/fa6'
+import { RiMessage2Fill } from "react-icons/ri";
 
 export default function Member() {
     return (
@@ -16,26 +18,52 @@ export default function Member() {
 
                 <div className='grid grid-cols-4 gap-10'>
 
-                    <div className='bg-primary-foreground hover:border-amber-300 border-2 hover:scale-105 duration-500 ease-in-out flex justify-center flex-col p-4 space-y-2 rounded-2xl'>
+                    <div className='bg-primary-foreground group relative hover:border-amber-300 border-2 hover:scale-105 duration-500 ease-in-out flex justify-center flex-col p-4 space-y-2 rounded-2xl'>
+
+                      <span className='absolute cursor-pointer top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-20'>  <FaShareNodes color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-45 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <FaLinkedinIn color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-35 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <RiMessage2Fill color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-25 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <FaSkype color='white' /></span>
+
                         <img className='rounded-2xl' src={manImg} alt="man picture" />
                         <h6 className='font-semibold text-xl'>Jhon Doe</h6>
                         <p className='text-gray-600' >Engineer</p>
                     </div>
-                    <div className='bg-primary-foreground hover:border-amber-300 border-2 duration-500 hover:scale-105 ease-in-out p-4 space-y-2 flex justify-center flex-col rounded-2xl'>
+                    <div className='bg-primary-foreground group relative hover:border-amber-300 border-2 hover:scale-105 duration-500 ease-in-out flex justify-center flex-col p-4 space-y-2 rounded-2xl'>
+
+                      <span className='absolute cursor-pointer top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-20'>  <FaShareNodes color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-45 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <FaLinkedinIn color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-35 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <RiMessage2Fill color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-25 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <FaSkype color='white' /></span>
+
                         <img className='rounded-2xl' src={manImg} alt="man picture" />
                         <h6 className='font-semibold text-xl'>Jhon Doe</h6>
                         <p className='text-gray-600' >Engineer</p>
                     </div>
-                    <div className='bg-primary-foreground hover:border-amber-300 border-2 duration-500 hover:scale-105 ease-in-out p-4 space-y-2 flex justify-center flex-col rounded-2xl'>
+                    <div className='bg-primary-foreground group relative hover:border-amber-300 border-2 hover:scale-105 duration-500 ease-in-out flex justify-center flex-col p-4 space-y-2 rounded-2xl'>
+
+                         <span className='absolute cursor-pointer top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-20'>  <FaShareNodes color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-45 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <FaLinkedinIn color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-35 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <RiMessage2Fill color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-25 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <FaSkype color='white' /></span>
+
                         <img className='rounded-2xl' src={manImg} alt="man picture" />
                         <h6 className='font-semibold text-xl'>Jhon Doe</h6>
                         <p className='text-gray-600' >Engineer</p>
                     </div>
-                    <div className='bg-primary-foreground hover:border-amber-300 border-2 duration-500 hover:scale-105 ease-in-out p-4 space-y-2 flex justify-center flex-col rounded-2xl'>
+                    <div className='bg-primary-foreground group relative hover:border-amber-300 border-2 hover:scale-105 duration-500 ease-in-out flex justify-center flex-col p-4 space-y-2 rounded-2xl'>
+
+                         <span className='absolute cursor-pointer top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-20'>  <FaShareNodes color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-45 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <FaLinkedinIn color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-35 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <RiMessage2Fill color='white' /></span>
+                      <span className='absolute cursor-pointer group-hover:top-25 duration-300  top-55 right-8 bg-[#B45C3D] rounded-full p-2 z-10'>  <FaSkype color='white' /></span>
+                      
                         <img className='rounded-2xl' src={manImg} alt="man picture" />
                         <h6 className='font-semibold text-xl'>Jhon Doe</h6>
                         <p className='text-gray-600' >Engineer</p>
                     </div>
+
+                 
 
 
                 </div>
