@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from "react-router";
 import PrimaryButton from "../../common/PrimaryButton";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FcBusinessman } from "react-icons/fc";
+import GalleryProDetailsHeader from "../../components/GalleryProductCompo/GalleryProDetailsHeader";
 
 export default function GalleryProductDetails() {
   const data = useLoaderData();
@@ -53,8 +54,16 @@ export default function GalleryProductDetails() {
   if (!product) return <p>Loading...</p>;
 
   return (
-    <div className="max-w-11/12 2xl:max-w-9/12 mx-auto py-10 px-4">
-      {/* Title + Meta */}
+
+   <section>
+
+    <GalleryProDetailsHeader product={product} ></GalleryProDetailsHeader>
+
+
+
+     <div className="max-w-11/12 2xl:max-w-9/12 mx-auto py-10 px-4">
+
+      {/* title */}
       <h1 className="text-3xl font-semibold">{product.title}</h1>
       <div className="flex items-center gap-3 text-gray-500 text-sm mt-2">
         <span>👤 {product.author}</span>
@@ -112,6 +121,7 @@ export default function GalleryProductDetails() {
         </div>
       </div>
     </div>
+   </section>
   );
 }
 
