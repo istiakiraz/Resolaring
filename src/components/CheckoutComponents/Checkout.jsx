@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FaGooglePay } from "react-icons/fa";
 import { Link } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 
@@ -48,7 +47,7 @@ export default function Checkout() {
           <div className="border-b pb-4 mb-6">
             <div className="flex justify-between items-center">
               <h3 className="font-semibold text-lg">Delivery details</h3>
-             <Link>
+             <Link to='/change-delivery-details' >
               <button className="underline hover:-underline-offset-0  font-semibold cursor-pointer">Change</button>
              </Link>
             </div>

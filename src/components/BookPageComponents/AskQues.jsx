@@ -17,7 +17,7 @@ import Cta from '../HomeComponents/Cta';
 
 export default function AskQues() {
 
-    const inputStyles = " bg-gray-100 border h-14 text-white placeholder:text-slate-400 focus:outline-secondary  rounded-md";
+    const inputStyles = " bg-gray-100 border h-14 placeholder:text-slate-400 focus:outline-secondary  rounded-md";
 
     return (
 

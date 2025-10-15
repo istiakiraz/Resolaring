@@ -12,13 +12,11 @@ export default function SharedGallery() {
 
   return (
     <div>
-        <GalleryHeader/>
+
+      <GalleryHeader />
+      <GalleryProduct products={data} />
+      <Cta></Cta>
       
-        <GalleryProduct products={data} />
-
-        <Cta></Cta>
-
-
     </div>
   )
 }

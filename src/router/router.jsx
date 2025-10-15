@@ -18,6 +18,7 @@ import GalleryProductDetails from "../pages/GalleryProductDetailsPage/GalleryPro
 import BookPage from "../pages/BookPage/BookPage";
 import Cart from "../pages/CartPage/Cart";
 import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
+import DeliveryDetails from "../pages/ChangeDeliveryDetails/DeliveryDetails";
 
 export const router = createBrowserRouter([
 
@@ -79,9 +80,12 @@ export const router = createBrowserRouter([
                 path: 'checkout',
                 Component: CheckoutPage,            
             },
+            {
+                path: 'change-delivery-details',
+                Component: DeliveryDetails,            
+            },
+        ]       
 
-        ]
-        
     },
     
     {
