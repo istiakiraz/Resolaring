@@ -5,6 +5,7 @@ import PrimaryButton from "../../common/PrimaryButton";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FcBusinessman } from "react-icons/fc";
 import GalleryProDetailsHeader from "../../components/GalleryProductCompo/GalleryProDetailsHeader";
+import Cta from "../../components/HomeComponents/Cta";
 
 export default function GalleryProductDetails() {
   const data = useLoaderData();
@@ -121,6 +122,8 @@ export default function GalleryProductDetails() {
         </div>
       </div>
     </div>
+
+       <Cta></Cta>
    </section>
   );
 }

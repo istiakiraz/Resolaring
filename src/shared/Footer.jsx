@@ -31,7 +31,6 @@ export default function Footer() {
 
           <p className="text-[12px] mt-6  leading-5 text-gray-400 ">At Resolaring, we believe in creating a sustainable future by promoting the reuse and recycling of solar equipment. Our platform connects buyers and sellers of second-hand solar panels, reducing waste and supporting green energy initiatives.</p>
 
-          {/* support details */}
           <div className='mt-6'>
             <h6 className='font-bold' >Support</h6>
             <p className='mt-2 text-gray-400  ' >Email: resolaring@gmail.com</p>
@@ -140,8 +139,10 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* form */}
+
           <form onSubmit={(e) => e.preventDefault()}>
-            {/* Grid for Name, Cognoms, Telephone, and E-mail */}
+           
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 mb-8">
               <div>
                 <Label htmlFor="name" className="text-white mb-2 block">Name*</Label>
@@ -199,6 +200,7 @@ export default function Footer() {
 
             </div>
           </form>
+
         </div>
 
 
