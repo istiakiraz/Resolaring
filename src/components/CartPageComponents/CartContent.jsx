@@ -4,6 +4,9 @@ import { FiTrash2 } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FcGoogle } from "react-icons/fc";
+import { CiShoppingTag } from "react-icons/ci";
+import { Link } from "react-router";
+
 
 export default function CartContent() {
   const [cartItems, setCartItems] = useState([
@@ -18,14 +21,14 @@ export default function CartContent() {
       id: 2,
       title: "JA Solar 360w",
       price: 60,
-      image: "https://i.ibb.co.com/RcxKxKp/image.png",
+      image: "https://i.ibb.co.com/nqHHdhQZ/image-1.png",
       quantity: 1,
     },
     {
       id: 3,
       title: "JA Solar 360w",
       price: 60,
-      image: "https://i.ibb.co.com/YZpg0yG/image.png",
+      image: "https://i.ibb.co.com/bg08cCWd/image-2.png",
       quantity: 1,
     },
   ]);
@@ -129,19 +132,23 @@ export default function CartContent() {
           </table>
 
          
-          <div className="mt-6 flex flex-col md:flex-row gap-3 items-center">
+          <div className="mt-6 flex flex-col md:flex-row gap-3 items-end justify-between">
+            <div className="flex flex-col" >
+                 <p className="underline flex gap-2 items-center mb-2"> <CiShoppingTag size={25} /> Enter a promo code</p>
             <div className="flex items-center border rounded-full overflow-hidden w-full md:w-auto">
               <Input
                 placeholder="Promo code"
                 className="rounded-none border-none px-4 py-2 w-56"
               />
-              <Button className="rounded-none bg-[#b14d2a] hover:bg-[#933f23] text-white px-5 py-2">
+              <Button className="rounded-none cursor-pointer bg-[#b14d2a] hover:bg-[#933f23] text-white px-5 py-2">
                 Apply
               </Button>
             </div>
+            </div>
+           
             <Button
-              variant="outline"
-              className="border border-[#b14d2a] text-[#b14d2a] hover:bg-[#b14d2a] hover:text-white flex items-center gap-2"
+           
+              className=" duration-300 ease-in-out cursor-pointer  bg-[#b14d2a] hover:text-white flex items-center gap-2"
             >
               <span>📝</span> Add a note
             </Button>
@@ -164,9 +171,13 @@ export default function CartContent() {
             <span>Total Amount</span>
             <span>${totalAmount.toFixed(2)}</span>
           </div>
+
+          <Link to='/checkout'>
           <Button className="w-full bg-yellow-400 cursor-pointer hover:bg-yellow-500 flex gap-2 items-center font-semibold text-black py-2 rounded-full mb-3">
            <FaCartShopping /> Checkout
           </Button>
+          </Link>
+
           <Button
             variant="outline"
             className="w-full border-gray-300 bg-black text-white duration-300 ease-in-out cursor-pointer py-2 flex items-center justify-center gap-2 rounded-full"

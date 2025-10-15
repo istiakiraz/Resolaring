@@ -3,6 +3,7 @@ import GalleryHeader from '../../components/SharedGalleryComponents/GalleryHeade
 import SolarEquipmentGrid from '../../components/HomeComponents/SolarEquipmentGrid'
 import { useLoaderData } from 'react-router'
 import GalleryProduct from '../../components/SharedGalleryComponents/GalleryProduct'
+import Cta from '../../components/HomeComponents/Cta'
 
 export default function SharedGallery() {
 
@@ -12,8 +13,12 @@ export default function SharedGallery() {
   return (
     <div>
         <GalleryHeader/>
-        {/* <SolarEquipmentGrid products={data} /> */}
+      
         <GalleryProduct products={data} />
+
+        <Cta></Cta>
+
+
     </div>
   )
 }

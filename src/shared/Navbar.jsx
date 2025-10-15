@@ -46,7 +46,7 @@ export default function Navbar() {
           ))}
 
 
-          <PrimaryButton to="/become-seller" icon={FaArrowRightLong}>
+          <PrimaryButton to="/auth/log-in" icon={FaArrowRightLong}>
             Become a Seller
           </PrimaryButton>
 

@@ -17,6 +17,7 @@ import GalleryProduct from "../components/SharedGalleryComponents/GalleryProduct
 import GalleryProductDetails from "../pages/GalleryProductDetailsPage/GalleryProductDetails";
 import BookPage from "../pages/BookPage/BookPage";
 import Cart from "../pages/CartPage/Cart";
+import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
 
 export const router = createBrowserRouter([
 
@@ -73,6 +74,10 @@ export const router = createBrowserRouter([
                 path: 'cart',
                 Component: Cart,
                 
+            },
+            {
+                path: 'checkout',
+                Component: CheckoutPage,            
             },
 
         ]
