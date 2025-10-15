@@ -16,6 +16,7 @@ import ProductDetails from "../pages/ProductDetailsPage/ProductDetails";
 import GalleryProduct from "../components/SharedGalleryComponents/GalleryProduct";
 import GalleryProductDetails from "../pages/GalleryProductDetailsPage/GalleryProductDetails";
 import BookPage from "../pages/BookPage/BookPage";
+import Cart from "../pages/CartPage/Cart";
 
 export const router = createBrowserRouter([
 
@@ -66,6 +67,11 @@ export const router = createBrowserRouter([
             {
                 path: 'book',
                 Component: BookPage,
+                
+            },
+            {
+                path: 'cart',
+                Component: Cart,
                 
             },
 
