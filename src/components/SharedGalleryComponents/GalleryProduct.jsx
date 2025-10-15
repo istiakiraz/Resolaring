@@ -101,7 +101,7 @@ export default function GalleryProduct({ products }) {
 
               <div className='flex items-center px-4 mb-4 justify-between'>
                 <div className="mt-4 flex items-center  gap-2  text-gray-600">
-                  <span className='rounded-full p-1 bg-gray-400 ' >   <FcBusinessman size={30} /></span>
+                  <span className='rounded-full p-1 bg-gray-200 ' >   <FcBusinessman size={30} /></span>
                   <span>{product.author}</span>
                 </div>
 
@@ -154,7 +154,7 @@ export default function GalleryProduct({ products }) {
               <h3 className="font-semibold text-2xl px-4 mt-2">{product.title}</h3>
               <p className='text-gray-500 px-4 text-sm line-clamp-3' >{product.details}</p>
               <div className="flex items-center px-4 justify-between">
-                <Link to={`/product-details/${product.id}`}>
+                <Link to={`/gallery-product/${product.id}`}>
                   <button className="mt-3  border border-black rounded-full py-2 px-2 text-sm font-medium hover:bg-secondary hover:border-secondary cursor-pointer duration-500 ">View Details</button>
                 </Link>
               </div>

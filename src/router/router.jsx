@@ -14,6 +14,7 @@ import SignUp from "../pages/AuthPages/SignUp";
 import SharedGallery from "../pages/SharedGalleryPage/SharedGallery";
 import ProductDetails from "../pages/ProductDetailsPage/ProductDetails";
 import GalleryProduct from "../components/SharedGalleryComponents/GalleryProduct";
+import GalleryProductDetails from "../pages/GalleryProductDetailsPage/GalleryProductDetails";
 
 export const router = createBrowserRouter([
 
@@ -58,7 +59,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'gallery-product/:id',
-                Component: GalleryProduct,
+                Component: GalleryProductDetails,
                 loader: () => fetch("/solarProducts.json"),
             },
 
