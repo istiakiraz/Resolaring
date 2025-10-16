@@ -8,7 +8,7 @@ const Counter = () => {
       <div className="flex flex-col lg:flex-row justify-center  px-5 place-content-center   space-y-10 lg:space-x-20">
         
         {/* First Counter */}
-        <div className='lg:border-r-2 border-b-2 lg:p-10 p-5  border-b-gray-100 lg:border-r-gray-100 '>
+        <div className='lg:border-r-2 border-b-2 lg:border-b-0 lg:p-10 p-5  border-b-gray-100 lg:border-r-gray-100 '>
           <CountUp
             start={0}
             end={379}
@@ -23,7 +23,7 @@ const Counter = () => {
         </div>
 
         {/* second counter */}
-        <div className='lg:border-r-2 border-b-2 lg:p-10 p-5 border-b-gray-100 lg:border-r-gray-100'>
+        <div className='lg:border-r-2 border-b-2 lg:border-b-0 lg:p-10 p-5 border-b-gray-100 lg:border-r-gray-100'>
           <CountUp
             start={0}
             end={78}

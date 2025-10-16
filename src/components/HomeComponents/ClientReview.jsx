@@ -41,14 +41,26 @@ export default function ClientReview() {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className=" 2xl:max-w-9/12 max-w-11/12 mx-auto px-4">
-        <h2 className="text-4xl font-bold text-left mb-10">What Our Users Say</h2>
+       
 
         <Carousel
         opts={{
           align: "start"
         }}
         className="w-full">
+
+          <div className="flex items-center  relative justify-between " >
+             <h2 className="text-4xl font-bold text-left mb-10">What Our Users Say</h2>
+          <div className="absolute right-12 "  >
+               <CarouselPrevious className="top-0   border-none  text-black bg-yellow-400 text-2xl hover:bg-secondary cursor-pointer duration-300 ease-in-out  " />
+          <CarouselNext className=" top-0    border-none bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-black" />
+          </div>
+          </div>
+
           <CarouselContent className="-ml-2 md:-ml-4">
+
+        
+
             {reviews.map((review) => (
               <CarouselItem key={review.id} className="pl-2 md:pl-4 md:basis-1/1 lg:basis-1/2">
                 <Card className=" rounded-xl border-4 border-white bg-yellow-50/90">
@@ -69,8 +81,7 @@ export default function ClientReview() {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="-top-15 left-65 md:left-150 lg:left-330 border-none text-black bg-yellow-400 text-2xl hover:bg-secondary cursor-pointer duration-300 ease-in-out  " />
-          <CarouselNext className=" -top-15 right-0 border-none bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-black" />
+        
         </Carousel>
       </div>
     </div>

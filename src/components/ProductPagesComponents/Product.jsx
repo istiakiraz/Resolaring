@@ -39,27 +39,27 @@ export default function Product({allProducts}) {
     return (
         <section className="2xl:max-w-9/12 max-w-11/12 mx-auto py-20">
             {/* search */}
-            <div className="flex justify-between items-center mb-10">
-                <h2 className="text-4xl font-bold">Your market for solar panels</h2>
+            <div className="flex justify-between space-y-2 flex-col lg:flex-row lg:items-center mb-10">
+                <h2 className="lg:text-4xl text-2xl font-bold">Your market for solar panels</h2>
                 <Input
                     type="text"
                     placeholder="Search products..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-96 border h-14 px-8 bg-gray-100 rounded-full  focus:ring-2 focus:ring-yellow-400"
+                    className="lg:w-96 border h-14 px-8 bg-gray-100 rounded-full  focus:ring-2 focus:ring-yellow-400"
                 />
             </div>
 
-            <div className="flex items-start justify-between gap-10">
+            <div className="grid grid-cols-8 items-start justify-between gap-10">
                 
                 {/* sidebar */}
-                <div className="space-y-10 sticky top-30 z-40">
+                <div className="space-y-10 col-span-3 md:col-span-2 sticky top-30 z-40">
                     {/* manufacturer */}
                     <div>
-                        <h6 className="font-bold text-2xl border-b border-gray-200 w-fit pb-2">
+                        <h6 className="font-bold text-sm lg:text-2xl border-b border-gray-200 w-fit pb-2">
                             Manufacturer By
                         </h6>
-                        <div className="px-4 mt-3 space-y-3">
+                        <div className="lg:px-4 mt-3 space-y-3">
                             {manufacturers.map((m) => (
                                 <div key={m} className="flex items-center gap-3">
                                     <Checkbox
@@ -79,9 +79,9 @@ export default function Product({allProducts}) {
 
                     {/* product type filter */}
                     <div>
-                        <h6 className="font-bold text-2xl border-b border-gray-200 w-fit pb-2">Filter by</h6>
-                        <p className="font-bold px-4 mt-2">Product Type</p>
-                        <div className="px-4 mt-3 space-y-3">
+                        <h6 className="font-bold text-sm lg:text-2xl border-b border-gray-200 w-fit pb-2">Filter by</h6>
+                        <p className="font-bold text-sm lg:text-xl px-4 mt-2">Product Type</p>
+                        <div className="lg:px-4 mt-3 space-y-3">
                             {productTypes.map((type) => (
                                 <div key={type} className="flex items-center gap-3">
                                     <Checkbox
@@ -103,14 +103,14 @@ export default function Product({allProducts}) {
 
                     <div>
 
-                        <h6 className="font-bold text-2xl border-b border-gray-200 w-fit pb-2">Price Range</h6>
+                        <h6 className="font-bold text-sm lg:text-2xl border-b border-gray-200 w-fit pb-2">Price Range</h6>
                         <p className="text-gray-700 mt-2"  >Price: $100 - $650,000</p>
 
                     </div>
                 </div>
 
                 {/* product cards */}
-                <div className="flex-1">
+                <div className="flex-1 col-span-5 md:col-span-6">
                     <p className="mb-6 text-gray-500">{filteredProducts.length} products found</p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -131,14 +131,14 @@ export default function Product({allProducts}) {
                                         <span className="text-gray-500">({product.reviews})</span>
                                     </span>
                                 </div>
-                                <h3 className="font-semibold text-2xl px-4 mt-2">{product.title}</h3>
+                                <h3 className="font-semibold lg:text-2xl px-4 mt-2">{product.title}</h3>
                                 <div className="flex items-center px-4 justify-between">
                                     <span>
                                         <p className="font-light text-sm text-gray-500 mt-2">Tax excluded</p>
-                                        <p className="text-gray-800 text-2xl font-bold">{product.price}</p>
+                                        <p className="text-gray-800 lg:text-2xl font-bold">{product.price}</p>
                                     </span>
                                     <Link to={`/product-details/${product.id}`} >
-                                    <button className="mt-3 border border-black rounded-full py-2 px-3 text-sm font-medium hover:bg-secondary hover:border-secondary cursor-pointer duration-500">
+                                    <button className="mt-3 border border-black rounded-full lg:py-2 p-1 lg:px-3 text-sm font-medium hover:bg-secondary hover:border-secondary cursor-pointer duration-500">
                                         View Details
                                     </button>
                                     </Link>
@@ -159,7 +159,7 @@ export default function Product({allProducts}) {
             <div className="bg-yellow-100 rounded-2xl text-center mt-20 py-20 flex flex-col bg-cover bg-center justify-center items-center p-8"
                 style={{ backgroundImage: `url(${bgImg})` }}
             >
-                <h3 className="text-5xl w-6/12 mx-auto text-white font-semibold mb-4">
+                <h3 className="text-5xl lg:w-6/12  mx-auto text-white font-semibold mb-4">
                     Join the community and post your panels
                 </h3>
                 <p className="text-white my-4">Subscribe Our Newsletter For Latest Updates</p>
@@ -169,7 +169,7 @@ export default function Product({allProducts}) {
                     placeholder="Enter Your Email..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-96 border h-14 px-8 bg-gray-100 rounded-full  focus:ring-2 focus:ring-yellow-400"
+                    className="lg:w-96 border h-14 px-8 bg-gray-100 rounded-full  focus:ring-2 focus:ring-yellow-400"
                 />
 
             </div>
