@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 
 export default function TopBar() {
   return (
-    <div className='bg-primary hidden md:block  py-6' >
+    <div className='bg-primary   py-6' >
 
       <div className='2xl:max-w-9/12 max-w-11/12 items-center justify-between flex mx-auto' >
 
@@ -23,7 +23,7 @@ export default function TopBar() {
           </div>
 
           {/* input */}
-          <Input className="bg-white py-5 px-6 w-96 rounded-4xl" placeholder='Search for product' />
+          <Input className="bg-white hidden md:block py-5 px-6 w-96 rounded-4xl" placeholder='Search for product' />
         </div>
 
         {/* right side */}
