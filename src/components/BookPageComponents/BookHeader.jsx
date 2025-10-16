@@ -5,7 +5,7 @@ import PrimaryButton from '../../common/PrimaryButton'
 
 export default function BookHeader() {
     return (
-        <section className="relative   mx-auto  py-30   flex items-center justify-center text-white overflow-hidden">
+        <section className="relative   mx-auto  py-10 lg:py-30   flex items-center justify-center text-white overflow-hidden">
             {/* bgImg + gradient */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -17,7 +17,7 @@ export default function BookHeader() {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 w-9/12   text-center md:text-left">
+            <div className="relative z-10 w-11/12 2xl:w-9/12  text-left md:text-left">
                 <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
                     Ask a Question about Product
                 </h1>
