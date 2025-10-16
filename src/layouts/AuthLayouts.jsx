@@ -9,10 +9,7 @@ export default function AuthLayouts() {
       <div>
           <Outlet></Outlet>
       </div>
-
         <img className='rounded-2xl h-7/12' src={workImg} alt="worker img" />
-
-
     </div>
   )
 }
