@@ -80,7 +80,7 @@ export default function GalleryProductDetails() {
 
       {/* des */}
       <div className="mt-8">
-        <h2 className="text-4xl font-semibold">
+        <h2 className="lg:text-4xl text-2xl font-semibold">
           {product.title} - Specifications, Features, and Performance Details
         </h2>
         <p className="text-gray-600 mt-3">{product.details}</p>
