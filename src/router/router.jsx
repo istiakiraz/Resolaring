@@ -18,6 +18,7 @@ import BookPage from "../pages/BookPage/BookPage";
 import Cart from "../pages/CartPage/Cart";
 import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
 import DeliveryDetails from "../pages/ChangeDeliveryDetails/DeliveryDetails";
+import AccountSettingsPage from "../pages/AccountSettingsPage/AccountSettingsPage";
 
 export const router = createBrowserRouter([
 
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
             {
                 path: 'change-delivery-details',
                 Component: DeliveryDetails,            
+            },
+            {
+                path: 'account-settings',
+                Component: AccountSettingsPage,            
             },
         ]       
 

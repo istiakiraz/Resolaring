@@ -103,7 +103,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="/br"
+                href="/book"
                 className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
                 Book Online
@@ -111,7 +111,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="/be"
+                href="/auth/log-in"
                 className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
                 Become a Seller
@@ -119,7 +119,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="/be"
+                href="/marketplace"
                 className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
                 Explore the Marketplace

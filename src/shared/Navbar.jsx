@@ -45,8 +45,7 @@ export default function Navbar() {
             </NavLink>
           ))}
 
-
-          <PrimaryButton to="/auth/log-in" icon={FaArrowRightLong}>
+          <PrimaryButton to="/account-settings" icon={FaArrowRightLong}>
             Become a Seller
           </PrimaryButton>
 
@@ -73,7 +72,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-gray-800"
+          className="lg:hidden text-gray-800"
         >
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -81,7 +80,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-4 pb-4">
+        <div className="lg:hidden px-4 pb-4">
           <nav className="flex flex-col space-y-2">
             {navLinks.map(link => (
               <NavLink
@@ -95,7 +94,7 @@ export default function Navbar() {
             ))}
 
             <Link
-              to="/become-seller"
+              to="/account-settings"
               onClick={() => setMobileMenuOpen(false)}
               className="bg-yellow-400 text-black text-sm px-4 py-2 rounded-full font-medium hover:bg-yellow-500 transition text-center"
             >
