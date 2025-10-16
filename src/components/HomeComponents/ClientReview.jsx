@@ -50,9 +50,9 @@ export default function ClientReview() {
         className="w-full">
           <CarouselContent className="-ml-2 md:-ml-4">
             {reviews.map((review) => (
-              <CarouselItem key={review.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/2">
+              <CarouselItem key={review.id} className="pl-2 md:pl-4 md:basis-1/1 lg:basis-1/2">
                 <Card className=" rounded-xl border-4 border-white bg-yellow-50/90">
-                  <CardContent className="p-6 flex gap-6">
+                  <CardContent className="p-6 flex flex-col-reverse md:flex-row gap-6">
                     
                     <div className="space-y-3">
                       <div className="flex text-yellow-500 mb-2">
@@ -69,7 +69,7 @@ export default function ClientReview() {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="-top-15 left-330 text-white text-2xl hover:bg-secondary cursor-pointer duration-300 ease-in-out  bg-white/5" />
+          <CarouselPrevious className="-top-15 left-65 md:left-150 lg:left-330 border-none text-black bg-yellow-400 text-2xl hover:bg-secondary cursor-pointer duration-300 ease-in-out  " />
           <CarouselNext className=" -top-15 right-0 border-none bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-black" />
         </Carousel>
       </div>

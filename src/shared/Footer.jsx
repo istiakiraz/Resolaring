@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <section className='bg-primary text-white py-20' >
 
-      <div className='2xl:max-w-9/12 flex  items-start gap-10 max-w-11/12 mx-auto '>
+      <div className='2xl:max-w-9/12 flex flex-col lg:flex-row   items-start gap-10 max-w-11/12 mx-auto '>
 
         <div className='w-4/12'>
           {/* logo */}
@@ -59,7 +59,7 @@ export default function Footer() {
         {/* footer link */}
 
         <div>
-          <p className="font-semibold tracking-wide ">Quick Link</p>
+          <p className="font-semibold tracking-wider ">Quick Link</p>
           <ul className="mt-2 space-y-2">
             <li>
               <a
@@ -130,7 +130,7 @@ export default function Footer() {
 
         {/* contact form  */}
 
-        <div className="max-w-4xl mx-auto pl-20  rounded-xl shadow-lg">
+        <div className="max-w-4xl mx-auto lg:pl-20  rounded-xl shadow-lg">
           <div className="mb-8">
             <h2 className="font-bold text-white mb-2">Contact</h2>
             <p className="text-[12px] mt-6  leading-5 text-gray-400">
@@ -203,10 +203,9 @@ export default function Footer() {
 
         </div>
 
-
       </div>
 
-      <div className='2xl:max-w-9/12 flex justify-center items-center gap-3 mt-10 pt-10 border-t border-gray-600 mx-auto'>
+      <div className='2xl:max-w-9/12 w-11/12 flex justify-center items-center gap-3 mt-10 pt-10 border-t border-gray-600 mx-auto'>
 
       <img className='size-8' src={logo} alt="logo" />
       <p className='text-[12px] text-gray-400'>Copyright 2025. All Rights Reserved. Powered by the Awesomeness of Fresh Fruit.</p>

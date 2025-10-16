@@ -19,13 +19,10 @@ export default function Faq() {
 
       <div className='2xl:max-w-9/12 max-w-11/12 mx-auto my-20'>
 
-      
-
-
 
       <h2 className="text-4xl font-bold mb-6 text-center">Why Choose Resolaring?</h2>
 
-      <div className='grid grid-cols-4 gap-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
 
         <div
           className="bg-cover hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-center bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"

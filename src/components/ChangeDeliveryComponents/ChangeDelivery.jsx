@@ -128,7 +128,7 @@ export default function ChangeDelivery() {
                                         />
                                     </div>
 
-                                      <div>
+                                    <div>
                                         <Label htmlFor="Zip/Postal" className=" mb-2 text-gray-500 block">Zip/Postal code *</Label>
                                         <Input
                                             type="number"
@@ -148,8 +148,8 @@ export default function ChangeDelivery() {
                                     <Button className=' text-black rounded-full py-5  px-4 border  border-gray-500 bg-white text-center' >
                                         Use Different Address
                                     </Button>
-                                    <PrimaryButton  type="submit" >
-                                       Save and Continue
+                                    <PrimaryButton type="submit" >
+                                        Save and Continue
                                     </PrimaryButton>
 
                                 </div>

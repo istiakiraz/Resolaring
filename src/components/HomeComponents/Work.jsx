@@ -17,17 +17,15 @@ export default function Work() {
 
          <img className="absolute  size-220  -right-100 z-1" src={circleSvg} alt="circle svg" />
 
-
-
         
-        <section className='2xl:max-w-9/12 py-20 relative z-10 flex items-center gap-10 max-w-11/12 mx-auto' >
+        <section className='2xl:max-w-9/12 py-20 relative z-10 flex flex-col-reverse lg:flex-row items-center gap-10 max-w-11/12 mx-auto' >
 
         <img className='rounded-2xl' src={workImg} alt="worker img" />
 
         <div>
             <h2 className='text-4xl font-bold mb-6 text-left'>How Resolaring Works</h2>
 
-            <div className='grid grid-cols-2 gap-10' >
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-10' >
 
                 <div className='bg-white rounded-2xl hover:bg-secondary/50 duration-400 ease-in-out space-y-4 p-5'>
 
