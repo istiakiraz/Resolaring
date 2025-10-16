@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 export default function PrimaryButton({
-  to = '/',
+  to = '',
   children,
   icon: Icon,
   className = '',

@@ -7,7 +7,7 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import PrimaryButton from '../../common/PrimaryButton';
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+;
 
 import {
     Select,
@@ -64,7 +64,7 @@ export default function ChangeDelivery() {
 
 
                         {/* delivery details */}
-                        <div className="border-b pb-4 mb-6">
+                        <div className=" pb-4 mb-6">
 
                             <h3 className="font-semibold text-lg">Delivery details</h3>
 
@@ -76,7 +76,7 @@ export default function ChangeDelivery() {
                                         <Input
                                             type="text"
                                             id="fastName"
-                                           
+
                                             className={inputStyles}
 
                                         />
@@ -86,7 +86,7 @@ export default function ChangeDelivery() {
                                         <Input
                                             type="text"
                                             id="lastName"
-                                          
+
                                             className={inputStyles}
 
                                         />
@@ -97,7 +97,7 @@ export default function ChangeDelivery() {
                                         <Input
                                             type="number"
                                             id="number"
-                                         
+
                                             className={inputStyles}
 
                                         />
@@ -119,26 +119,37 @@ export default function ChangeDelivery() {
                                         </Select>
 
                                     </div>
-
-                                      <div>
+                                    <div>
                                         <Label htmlFor="Address" className=" mb-2 text-gray-500 block">Address *</Label>
                                         <Input
                                             type="text"
-                                            id="address"                           
+                                            id="address"
+                                            className={inputStyles}
+                                        />
+                                    </div>
+
+                                      <div>
+                                        <Label htmlFor="Zip/Postal" className=" mb-2 text-gray-500 block">Zip/Postal code *</Label>
+                                        <Input
+                                            type="number"
+                                            id="Zip"
+
                                             className={inputStyles}
 
                                         />
                                     </div>
-                                  
-                                    
                                 </div>
 
-                               
-
                                 {/* Submit Button */}
-                                <div className="flex justify-center">
-                                    <PrimaryButton type="submit" icon={FaArrowRightLong}>
-                                        Send Inquiry
+
+                                <div className="flex gap-3 items-center justify-center">
+
+
+                                    <Button className=' text-black rounded-full py-5  px-4 border  border-gray-500 bg-white text-center' >
+                                        Use Different Address
+                                    </Button>
+                                    <PrimaryButton  type="submit" >
+                                       Save and Continue
                                     </PrimaryButton>
 
                                 </div>
@@ -149,19 +160,6 @@ export default function ChangeDelivery() {
                         </div>
 
 
-
-
-
-                        {/* review */}
-                        <div>
-                            <h3 className="font-semibold text-lg mb-2">Review & place order</h3>
-                            <p className="text-gray-500 text-sm mb-4">
-                                Review your details and order before you’re ready.
-                            </p>
-                            <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-6 rounded-xl text-lg">
-                                Place Order & Pay
-                            </Button>
-                        </div>
                     </div>
 
                     {/* right side  */}
