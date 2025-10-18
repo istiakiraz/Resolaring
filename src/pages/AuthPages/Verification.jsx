@@ -20,7 +20,6 @@ export default function Verification() {
     }
 
   
-
     return (
         <div className='space-y-3  items-center'>
 

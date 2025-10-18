@@ -7,14 +7,11 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
-    DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
-
 
 
 
@@ -31,9 +28,7 @@ export default function AccountSetting() {
     const onSubmit = (data) => {
         console.log(data);
 
-
         alert('password are not same')
-
     }
 
 
@@ -128,31 +123,15 @@ export default function AccountSetting() {
                                 View and update your login email and password.
                             </p>
                             <div className="space-y-4">
+
+                                {/* email dialog */}
                                 <div>
                                     <p className="text-gray-700 text-sm">
                                         Login email: <span className="font-medium">demo@gmail.com</span>
                                     </p>
 
-                                    <Dialog>
+                                     <Dialog>
                                         <DialogTrigger><button className="hover:underline cursor-pointer text-sm mt-1">Change Email</button></DialogTrigger>
-                                        <DialogContent>
-                                            <DialogHeader>
-                                                <DialogTitle>Are you absolutely sure?</DialogTitle>
-                                                <DialogDescription>
-                                                    This action cannot be undone. This will permanently delete your account
-                                                    and remove your data from our servers.
-                                                </DialogDescription>
-                                            </DialogHeader>
-                                        </DialogContent>
-                                    </Dialog>
-
-                                </div>
-                                <div>
-                                    <p className="text-gray-700 text-sm">
-                                        Password: <span className="font-medium">••••••••</span>
-                                    </p>
-                                    <Dialog>
-                                        <DialogTrigger><button className="hover:underline cursor-pointer text-sm mt-1">Change Password</button></DialogTrigger>
                                         <DialogContent>
                                             <DialogHeader>
 
@@ -219,6 +198,109 @@ export default function AccountSetting() {
                                                                 {...register("password", { required: true })}
                                                                 type={showPass ? "text" : "password"}
                                                                 className={`pl-10 flex-grow w-full h-12 px-4 transition duration-200 bg-gray-100 border rounded-xl appearance-none
+                                                            ${errors.password2 ? "border-red-500 focus:border-red-500" : "border-gray-300 focus:border-deep-purple-accent-400"}
+                                                            focus:outline-secondary focus:shadow-outline`}
+                                                                name="password2"
+                                                            />
+
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => {
+                                                                    setShowPass(!showPass);
+                                                                }}
+                                                                className="btn btn-xs absolute top-10  right-6"
+                                                            >
+                                                                {showPass ? (
+                                                                    <FaEyeSlash color="gray" size={22} />
+                                                                ) : (
+                                                                    <FaEye color="gray" size={22} />
+                                                                )}
+                                                            </button>
+
+                                                            {/* remember */}
+                                                            <div className="flex items-center mt-4 justify-between">
+                                                                <label className="flex items-center gap-2 text-sm">
+                                                                  
+                                                                    <span className='text-sm hover:underline duration-300 ease-in-out cur '>
+                                                                        I agree to the terms & policy
+                                                                    </span>
+                                                                </label>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="mt-4  sm:mb-4">
+
+                                                        <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 px-50' type="submit">
+                                                            Sign Up
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </DialogHeader>
+                                        </DialogContent>
+                                    </Dialog>
+
+                                </div>
+                                <div>
+                                    <p className="text-gray-700 text-sm">
+                                        Password: <span className="font-medium">••••••••</span>
+                                    </p>
+                                    {/* pass dialog */}
+                                    <Dialog>
+                                        <DialogTrigger><button className="hover:underline cursor-pointer text-sm mt-1">Change Password</button></DialogTrigger>
+                                        <DialogContent>
+                                            <DialogHeader>
+
+                                                <form className='mt-4'
+                                                    onSubmit={handleSubmit(onSubmit)}
+                                                >
+                                                    <h4 className='font-semibold text-2xl' >Change password</h4>
+                                                    <p className='text-gray-500 mb-2' >This will be your new login password.</p>
+                                                    <div className="mb-1 sm:mb-2">
+                                                        
+
+                                                     
+                                                        {/* pass 1 */}
+                                                        <div className="mb-4 relative">
+                                                            <div className='flex justify-between mb-2 items-center'>
+                                                                <label className='text-sm'>Your Password</label>
+                                                            </div>
+                                                            <input
+                                                                placeholder="**********"
+                                                                {...register("password", { required: true })}
+                                                                type={showPass ? "text" : "password"}
+                                                                className={`px-4 flex-grow w-full h-12  transition duration-200 bg-gray-100 border rounded-xl appearance-none
+                                                            ${errors.password2 ? "border-red-500 focus:border-red-500" : "border-gray-300 focus:border-deep-purple-accent-400"}
+                                                            focus:outline-secondary focus:shadow-outline`}
+                                                                name="password2"
+                                                            />
+
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => {
+                                                                    setShowPass(!showPass);
+                                                                }}
+                                                                className="btn btn-xs absolute top-10  right-6"
+                                                            >
+                                                                {showPass ? (
+                                                                    <FaEyeSlash color="gray" size={22} />
+                                                                ) : (
+                                                                    <FaEye color="gray" size={22} />
+                                                                )}
+                                                            </button>
+
+                                                        </div>
+                                                        {/* pass 2 */}
+                                                        <div className="mb-4 relative">
+                                                            <div className='flex justify-between mb-2 items-center'>
+                                                                <label className='text-sm'>New Password</label>
+                                                            </div>
+                                                            <input
+                                                                placeholder="**********"
+                                                                {...register("password", { required: true })}
+                                                                type={showPass ? "text" : "password"}
+                                                                className={`flex-grow w-full h-12 px-4 transition duration-200 bg-gray-100 border rounded-xl appearance-none
                                                             ${errors.password2 ? "border-red-500 focus:border-red-500" : "border-gray-300 focus:border-deep-purple-accent-400"}
                                                             focus:outline-secondary focus:shadow-outline`}
                                                                 name="password2"
