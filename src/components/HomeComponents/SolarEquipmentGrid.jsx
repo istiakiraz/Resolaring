@@ -11,7 +11,7 @@ import bgSvg from '../svg/home-bg-svg.svg'
 export default function SolarEquipmentGrid({products}) {
 
   return (
-<div className="bg-primary-foreground overflow-x-hidden relative py-10">
+<div className="bg-primary-foreground overflow-x-hidden relative lg:py-10">
 
     {/* left side bg */}
   <img className="absolute top-20  -left-150 z-1" src={circleSvg} alt="circle svg" />
@@ -22,8 +22,8 @@ export default function SolarEquipmentGrid({products}) {
   <img className="absolute top-10 right-10 z-1" src={bgSvg} alt="bg svg" />
 
         <section className="py-10 z-10 relative 2xl:max-w-9/12 max-w-11/12 mx-auto">
-      <h2 className="text-4xl font-bold mb-6 text-center md:text-left">Featured Solar Equipment</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <h2 className="2xl:text-4xl text-3xl font-bold mb-6 text-center md:text-left">Featured Solar Equipment</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
         {products.map((product) => (
           <div key={product.id} className="bg-white rounded-2xl shadow  pb-4">
             <div className="relative">

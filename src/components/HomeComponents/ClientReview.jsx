@@ -6,26 +6,29 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
-    id:1,
+    id: 1,
     img: "https://i.ibb.co.com/NnFvP6R0/young-handsome-business-man-choosing-car-car-showroom-1.png",
     text: `I went through tax season last year with a US based Tax person that I have been using for years. He could not answer my questions pertaining to my expat status and I was lucky enough, yes, lucky enough to have a friend down here steer me to Randall Brady and his very competent team of tax specialists. Every question was met...`,
     name: "Jared Woods",
     role: "Solar Installer"
   },
-  { id:2,
+  {
+    id: 2,
     img: "https://i.ibb.co.com/xqhSpk1S/business-man-banner-concept-with-copy-space-1.png",
     text: `I went through tax season last year with a US based Tax person that I have been using for years. He could not answer my questions pertaining to my expat status and I was lucky enough, yes, lucky enough to have a friend down here steer me to Randall Brady and his very competent team...`,
     name: "Jared Woods",
     role: "Solar Installer"
   },
-  
-  { id:3,
+
+  {
+    id: 3,
     img: "https://i.ibb.co.com/xqhSpk1S/business-man-banner-concept-with-copy-space-1.png",
     text: `I went through tax season last year with a US based Tax person that I have been using for years. He could not answer my questions pertaining to my expat status and I was lucky enough, yes, lucky enough to have a friend down here steer me to Randall Brady and his very competent team...`,
     name: "Jared Woods",
     role: "Solar Installer"
   },
-   { id:4,
+  {
+    id: 4,
     img: "https://i.ibb.co.com/NnFvP6R0/young-handsome-business-man-choosing-car-car-showroom-1.png",
     text: `I went through tax season last year with a US based Tax person that I have been using for years. He could not answer my questions pertaining to my expat status and I was lucky enough, yes, lucky enough to have a friend down here steer me to Randall Brady and his very competent team of tax specialists. Every question was met...`,
     name: "Jared Woods",
@@ -41,31 +44,31 @@ export default function ClientReview() {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className=" 2xl:max-w-9/12 max-w-11/12 mx-auto px-4">
-       
+
 
         <Carousel
-        opts={{
-          align: "start"
-        }}
-        className="w-full">
+          opts={{
+            align: "start"
+          }}
+          className="w-full">
 
-          <div className="flex items-center  relative justify-between " >
-             <h2 className="text-4xl font-bold text-left mb-10">What Our Users Say</h2>
-          <div className="absolute right-12 "  >
-               <CarouselPrevious className="top-0   border-none  text-black bg-yellow-400 text-2xl hover:bg-secondary cursor-pointer duration-300 ease-in-out  " />
-          <CarouselNext className=" top-0    border-none bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-black" />
-          </div>
+          <div className="flex lg:flex-row flex-col space-y-3 items-center  relative justify-between " >
+            <h2 className="text-4xl font-bold text-left mb-10">What Our Users Say</h2>
+            <div className="absolute right-12  "  >
+              <CarouselPrevious className="top-0   border-none  text-black bg-yellow-400 text-2xl hover:bg-secondary cursor-pointer duration-300 ease-in-out  " />
+              <CarouselNext className=" top-0    border-none bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-black" />
+            </div>
           </div>
 
           <CarouselContent className="-ml-2 md:-ml-4">
 
-        
+
 
             {reviews.map((review) => (
               <CarouselItem key={review.id} className="pl-2 md:pl-4 md:basis-1/1 lg:basis-1/2">
                 <Card className=" rounded-xl border-4 border-white bg-yellow-50/90">
                   <CardContent className="p-6 flex flex-col-reverse md:flex-row gap-6">
-                    
+
                     <div className="space-y-3">
                       <div className="flex text-yellow-500 mb-2">
                         {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-500" />)}
@@ -81,7 +84,7 @@ export default function ClientReview() {
             ))}
           </CarouselContent>
 
-        
+
         </Carousel>
       </div>
     </div>

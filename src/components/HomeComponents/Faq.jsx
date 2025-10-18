@@ -17,15 +17,15 @@ export default function Faq() {
        <img className="absolute top-10  left-2 z-1" src={bgSvg} alt="bg svg" />
        <img className="absolute bottom-10  right-2 z-1" src={bgSvg} alt="bg svg" />
 
-      <div className='2xl:max-w-9/12 max-w-11/12 mx-auto my-20'>
+      <div className='2xl:max-w-9/12 max-w-11/12 mx-auto py-10 lg:py-20'>
 
 
-      <h2 className="text-4xl font-bold mb-6 text-center">Why Choose Resolaring?</h2>
+      <h2 className="2xl:text-4xl text-2xl font-bold mb-6 text-center">Why Choose Resolaring?</h2>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10'>
 
         <div
-          className="bg-cover hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-center bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
+          className="bg-cover hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-center bg-no-repeat space-y-4 h-fit min-h-68 w-full p-8 rounded-xl"
           style={{ backgroundImage: `url(${frame1})` }}
         >
           <img src={svg1} alt="svg img" />
@@ -34,7 +34,7 @@ export default function Faq() {
         </div>
 
         <div
-          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
+          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-fit min-h-68 w-full p-8 rounded-xl"
           style={{ backgroundImage: `url(${frame2})` }}
         >
           <img src={svg2} alt="svg img" />
@@ -43,7 +43,7 @@ export default function Faq() {
         </div>
 
         <div
-          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
+          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-fit min-h-68 w-full p-6 rounded-xl"
           style={{ backgroundImage: `url(${frame3})` }}
         >
           <img src={svg3} alt="svg img" />
@@ -52,7 +52,7 @@ export default function Faq() {
         </div>
 
         <div
-          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-68 w-full p-8 rounded-xl"
+          className="bg-cover bg-center hover:scale-105 hover:shadow-xl duration-600 cursor-grab ease-in-out bg-no-repeat space-y-4 h-fit min-h-68 w-full p-6 rounded-xl"
           style={{ backgroundImage: `url(${frame4})` }}
         >
           <img src={svg4} alt="svg img" />

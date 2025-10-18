@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 lg:w-6/12 lg:mr-auto lg:pl-20  text-center md:text-left">
+      <div className="relative z-10 2xl:w-6/12 lg:w-8/12 lg:mr-auto lg:pl-20  text-center md:text-left">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
           Empowering Sustainability 
           Through Solar Recycling
