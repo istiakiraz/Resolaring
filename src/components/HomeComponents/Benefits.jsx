@@ -19,13 +19,13 @@ export default function Benefits() {
 
             <div className='2xl:max-w-9/12 relative z-10 max-w-11/12 mx-auto lg:py-20'>
 
-                <h2 className="text-4xl font-bold mb-6 text-center">Benefits of Joining the Solar Revolution</h2>
+                <h2 className="2xl:text-4xl text-3xl font-bold mb-6 text-center">Benefits of Joining the Solar Revolution</h2>
 
                 <div className='grid grid-cols-1 mx-auto md:grid-cols-2 lg:grid-cols-3 gap-10'>
 
 
 
-                    <div className="relative h-50 w-fit min-w-full p-8 rounded-xl overflow-hidden hover:scale-105 hover:shadow-xl duration-600 ease-in-out cursor-grab">
+                    <div className="relative min-h-50 h-fit w-fit min-w-full p-8 rounded-xl overflow-hidden hover:scale-105 hover:shadow-xl duration-600 ease-in-out cursor-grab">
                         {/* Bg img */}
                         <div
                             className="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-700"
@@ -44,7 +44,7 @@ export default function Benefits() {
                             </p>
                         </div>
                     </div>
-                    <div className="relative h-50 w-fit min-w-full p-8 rounded-xl overflow-hidden hover:scale-105 hover:shadow-xl duration-600 ease-in-out cursor-grab">
+                    <div className="relative min-h-50 h-fit w-fit min-w-full p-8 rounded-xl overflow-hidden hover:scale-105 hover:shadow-xl duration-600 ease-in-out cursor-grab">
                         {/* Bg img */}
                         <div
                             className="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-700"
@@ -63,7 +63,7 @@ export default function Benefits() {
                             </p>
                         </div>
                     </div>
-                    <div className="relative h-50 min-w-full   p-8 md:col-span-2 md:mx-auto lg:col-span-1 w-fit rounded-xl overflow-hidden hover:scale-105 hover:shadow-xl duration-600 ease-in-out cursor-grab">
+                    <div className="relative min-h-50 h-fit min-w-full   p-8 md:col-span-2 md:mx-auto lg:col-span-1 w-fit rounded-xl overflow-hidden hover:scale-105 hover:shadow-xl duration-600 ease-in-out cursor-grab">
                         {/* Bg img */}
                         <div
                             className="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-700"

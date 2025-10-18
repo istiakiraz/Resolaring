@@ -24,7 +24,7 @@ export default function Work() {
 
         <div className='lg:h-full h-64 sm:h-[400px] w-full lg:w-96 shrink-0
         '>
-            <img className='rounded-2xl w-full h-full object-center md:object-cover shrink-0' src={workImg} alt="worker img" />
+            <img className='rounded-2xl w-full h-full object-cover object-top md:object-cover shrink-0' src={workImg} alt="worker img" />
         </div>
 
         <div>

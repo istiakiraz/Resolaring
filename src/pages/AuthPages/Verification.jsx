@@ -24,7 +24,7 @@ export default function Verification() {
     return (
         <div className='space-y-3  items-center'>
 
-            <h1 className='text-5xl w-120 mb-2 font-semibold'>We will send verification code on your email ID</h1>
+            <h1 className='lg:text-5xl text-3xl w-120 mb-2 font-semibold'>We will send verification code on your email ID</h1>
 
             <form className='mt-4'
                 onSubmit={handleSubmit(onSubmit)}
@@ -44,7 +44,7 @@ export default function Verification() {
                 </div>
 
                 <div className="mt-4  sm:mb-4">
-                    <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 px-50' type="submit">
+                    <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 w-full place-content-center ' type="submit">
                         Verify
                     </button>
                 </div>

@@ -34,15 +34,15 @@ export default function LogIn() {
 
 
     return (
-        <div className='space-y-3  items-center'>
+        <div className='space-y-3 w-fit  items-center'>
 
-            <h1 className='text-5xl mb-2 font-semibold'>Welcome back!</h1>
+            <h1 className='lg:text-5xl text-3xl mb-2 font-semibold'>Welcome back!</h1>
             <p className='text-gray-500 ' >Enter your Credentials to access your account</p>
 
             <form className='mt-4'
                 onSubmit={handleSubmit(onSubmit)}
             >
-                <div className="mb-1 sm:mb-2">
+                <div className="mb-1 flex flex-col sm:mb-2">
                     {/* email */}
                     <div className="mb-4 relative">
                         <label className='text-sm'>Email*</label>
@@ -50,7 +50,7 @@ export default function LogIn() {
                             placeholder="Enter your email"
                             {...register("email", { required: true })}
                             type="email"
-                            className="pl-10 flex-grow w-full h-12 rounded-xl focus:outline-secondary  transition duration-200 bg-gray-100 border"
+                            className="pl-10 flex-grow w-full h-12  rounded-xl focus:outline-secondary  transition duration-200 bg-gray-100 border"
                             name="email"
                         />
 
@@ -119,7 +119,7 @@ export default function LogIn() {
 
                 <div className="mt-4  sm:mb-4">
 
-                    <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 px-50' type="submit">
+                    <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 place-content-center w-full ' type="submit">
                          Sign In
                     </button>
                 </div>

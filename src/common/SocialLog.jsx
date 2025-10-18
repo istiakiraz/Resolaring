@@ -10,7 +10,7 @@ export default function SocialLog() {
             <Separator /> Or <Separator />
         </span>
 
-        <div className='mt-4 flex items-center gap-5'>
+        <div className='mt-4 flex flex-col lg:flex-row items-center gap-5'>
                 <button className='rounded-full border hover:bg-amber-300 cursor-pointer duration-300 ease-in-out border-gray-300 px-8 py-4 flex items-center gap-2'>
                   <FcGoogle size={25} />  Sign in with Google
                 </button>

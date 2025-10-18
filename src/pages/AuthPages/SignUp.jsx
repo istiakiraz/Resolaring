@@ -147,7 +147,7 @@ export default function SignUp() {
 
                 <div className="mt-4  sm:mb-4">
 
-                    <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 px-50' type="submit">
+                    <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 place-content-center px-32 lg:px-50' type="submit">
                         Sign Up
                     </button>
                 </div>

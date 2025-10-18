@@ -42,7 +42,7 @@ export default function PanelsRecycled() {
   return (
     <div>
       <section className="2xl:max-w-9/12 py-20 max-w-11/12 mx-auto">
-        <h2 className="text-center text-4xl font-semibold mb-12">
+        <h2 className="text-center text-3xl 2xl:text-4xl font-semibold mb-12">
           How are panels recycled?
         </h2>
 

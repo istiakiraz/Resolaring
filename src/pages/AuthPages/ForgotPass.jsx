@@ -19,9 +19,9 @@ export default function ForgotPass() {
         }
     }
     return (
-        <div className='space-y-3  items-center'>
+        <div className='space-y-3 w-full items-center'>
 
-            <h1 className='text-5xl mb-2 font-semibold'>Verify Email</h1>
+            <h1 className='lg:text-5xl text-3xl mb-2 font-semibold'>Verify Email</h1>
 
             <form className='mt-4'
                 onSubmit={handleSubmit(onSubmit)}
@@ -42,7 +42,7 @@ export default function ForgotPass() {
 
                 <div className="mt-4  sm:mb-4">
 
-                    <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 px-50' type="submit">
+                    <button className='bg-yellow-400 duration-500 text-black text-sm py-3 cursor-pointer flex gap-2 items-center rounded-full font-medium hover:bg-yellow-500 place-content-center w-full' type="submit">
                         Send
                     </button>
                 </div>

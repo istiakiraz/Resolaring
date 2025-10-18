@@ -18,7 +18,7 @@ export default function Footer() {
 
       <div className='2xl:max-w-9/12 flex flex-col lg:flex-row   items-start gap-10 max-w-11/12 mx-auto '>
 
-        <div className='w-4/12'>
+        <div className='lg:w-4/12'>
           {/* logo */}
           <Link to="/" className="flex flex-col items-start space-y-2">
 
