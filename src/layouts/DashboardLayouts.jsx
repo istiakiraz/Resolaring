@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import { GoArrowLeft } from "react-icons/go";
 import { Link, NavLink, Outlet } from "react-router";
-import logo from "../assets/Img/2.png";
-import {
-  FiUser,
-  FiBook,
-  FiActivity,
-  FiClock,
-  FiPlusCircle,
-  FiEdit3,
-  FiMail,
-  FiUserCheck,
-  FiDollarSign,
-} from "react-icons/fi";
-import { FaCalendarPlus, FaUserClock } from "react-icons/fa";
+import logo from "../components/svg/footerLogo.svg";
+import { IoBarChartOutline } from "react-icons/io5";
+import { FaListAlt } from "react-icons/fa";
+import { RiLogoutBoxRLine } from "react-icons/ri";
+import { AiFillFileAdd } from "react-icons/ai";
+import { MdManageAccounts } from "react-icons/md";
+import { GrDocumentTime } from "react-icons/gr";
+
+import { GoBell, GoPlusCircle } from "react-icons/go";
+import { FcBusinessman } from 'react-icons/fc';
+import PrimaryButton from "../common/PrimaryButton";
+
+
+
 
 export default function DashboardLayouts() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -30,9 +30,9 @@ export default function DashboardLayouts() {
     <div className=" min-h-screen h-full">
       {/* ---   nav ber   --- */}
 
-      <nav className="sticky top-0 z-100 w-full border-b border-gray-200 bg-minor">
+      <nav className="sticky top-0 z-100 w-full bg-minor">
         <div className="px-3 py-3 lg:px-5 lg:pl-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between ">
             <div className="flex items-center justify-start rtl:justify-end">
               {/* ✅ Drawer Toggle Button with animation */}
               <button
@@ -73,12 +73,38 @@ export default function DashboardLayouts() {
               </button>
 
               <Link
-                to="/dashboard"
-                className="self-center  ms-3 text-xl lg:text-2xl font-semibold whitespace-nowrap text-white"
+                to="/"
               >
-                Dashboard
+              <div 
+              className={`lg:flex items-center w-fit hidden   p-2 gap-2 
+                ${
+                    isDrawerOpen ? 'block' : 'hidden' }
+                     `}>
+                            <img src={logo} alt="Resolaring Logo" className="h-8 w-auto" />
+                            <span className="text-2xl text-white font-semibold">Resolaring</span>
+                          </div>
               </Link>
+
+              
             </div>
+             <nav className='flex items-center w-full pl-30 pr-10 justify-between' >
+                          <h2 className='text-2xl lg:text-3xl font-bold' >Overview</h2>
+                          <div className='flex items-center gap-2' >
+                              <input placeholder='Search for product' className=' px-4 py-2 w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
+                              <PrimaryButton className='w-fit' icon={GoPlusCircle} >
+                                  Add Product
+                              </PrimaryButton>
+                              <GoBell size={25} />
+              
+                              <div className='flex items-center gap-2' >
+                                  <div className='p-2 rounded-full w-fit bg-gray-200' ><FcBusinessman size={30} /></div>
+                                  <span>
+                                      <h6 className='font-bold' >John kal</h6>
+                                      <p className='text-gray-400' >Seller</p>
+                                  </span>
+                              </div>
+                          </div>
+                      </nav>
           </div>
         </div>
       </nav>
@@ -86,7 +112,7 @@ export default function DashboardLayouts() {
       {/* ---   drawer   --- */}
 
       <div
-        className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform duration-300 bg-primary border-r border-primary 
+        className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20  transition-transform duration-300 bg-primary border-r border-primary 
         ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"} 
         lg:translate-x-0`}
       >
@@ -96,11 +122,11 @@ export default function DashboardLayouts() {
 
             <li>
               <NavLink
-                to="/dashboard"
+                to="/dashboard/overview"
                 onClick={closeDrawer}
                 className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
               >
-                <FiUser className="text-xl" /> Profile Page
+                <IoBarChartOutline className="text-xl" /> Overview
               </NavLink>
             </li>
            
@@ -110,7 +136,7 @@ export default function DashboardLayouts() {
                     onClick={closeDrawer}
                     className="flex items-center gap-2 p-2 text-white  hover:bg-accent duration-300 ease-in-out ms-3 group"
                   >
-                    <FiBook className="text-xl" /> Booked Trainer
+                    <AiFillFileAdd className="text-xl" /> Add New Listing
                   </NavLink>
                 </li>
                 <li>
@@ -119,7 +145,7 @@ export default function DashboardLayouts() {
                     onClick={closeDrawer}
                     className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
                   >
-                    <FiActivity className="text-xl" /> Activity Log
+                    <FaListAlt className="text-xl" /> Manage Listings
                   </NavLink>
                 </li>
              
@@ -133,114 +159,35 @@ export default function DashboardLayouts() {
                     onClick={closeDrawer}
                     className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
                   >
-                    <FiClock className="text-xl" /> Manage Slots
+                    <GrDocumentTime className="text-xl" /> Order List
                   </NavLink>
                 </li>
 
                 <li>
                   <NavLink
-                    to="/dashboard/add-new-slot"
+                    to="/dashboard/accounts"
                     onClick={closeDrawer}
                     className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
                   >
-                    <FiPlusCircle className="text-xl" /> Add New Slot
+                    <MdManageAccounts size={25} className="text-xl" /> Account Settings
                   </NavLink>
                 </li>
 
-                <li>
-                  <NavLink
-                    to="/dashboard/add-forum"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <FiEdit3 className="text-xl" /> Add New Forum
-                  </NavLink>
-                </li>
-                         
-            
-                <li>
-                  <NavLink
-                    to="/dashboard/newsletter"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <FiMail className="text-xl" /> Newsletter
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink
-                    to="/dashboard/all-trainers"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <FiUserCheck className="text-xl" /> All Trainers
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink
-                    to="/dashboard/applied-trainer"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <FaUserClock className="text-xl" /> Applied Trainer
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink
-                    to="/dashboard/balance"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <FiDollarSign className="text-xl" /> Balance
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink
-                    to="/dashboard/add-class"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <FaCalendarPlus className="text-xl" /> Add New Class
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink
-                    to="/dashboard/add-forum"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <FiEdit3 className="text-xl" /> Add New Forum
-                  </NavLink>
-                </li>
-             
           </ul>
 
           {/* ✅ Bottom Back Button */}
-          <div className="mb-6 mx-auto">
-            <img className="w-40 ms-3 mb-2" src={logo} alt="logo" />
-            <Link onClick={closeDrawer} to="/">
-              <a className="relative inline-block text-lg group">
-                <span className="relative z-10 block md:px-5 px-3 py-2 md:py-2 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-secondary rounded-lg group-hover:text-primary">
-                  <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-                  <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-secondary group-hover:-rotate-180 ease"></span>
-                  <span className="relative font-title  text-sm md:text-[16px] flex items-center gap-2 ">
-                    {" "}
-                    <GoArrowLeft size={20} /> Back To Home
-                  </span>
-                </span>
-                <span className="absolute bottom-0 right-0 w-full h-10 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-secondary rounded-lg group-hover:mb-0 group-hover:mr-0" />
-              </a>
+          <div className="mb-6 mx-auto w-full px-6 hover:bg-accent duration-300 ease-in-out py-3  text-white">
+            <Link onClick={closeDrawer} to="/auth/log-in">
+            <button className="flex gap-2 items-center">
+                <RiLogoutBoxRLine size={25} />
+                Log out
+            </button>
             </Link>
           </div>
         </div>
       </div>
 
-      <div className="p-4 lg:ml-64">
+      <div className="p-4 lg:ml-54">
         <Outlet />
       </div>
     </div>

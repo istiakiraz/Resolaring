@@ -33,7 +33,7 @@ export default function AccountSetting() {
 
     return (
 
-        <section className='2xl:w-9/12 w-11/12 py-20 mx-auto' >
+        <section className='w-11/12 2xl:w-9/12 py-10 mx-auto' >
             <h2 className='font-semibold text-3xl mb-8' >Account Settings</h2>
 
             <Tabs defaultValue="account" className=" bg-none w-full">
