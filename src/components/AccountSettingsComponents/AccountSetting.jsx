@@ -31,7 +31,6 @@ export default function AccountSetting() {
         alert('password are not same')
     }
 
-
     return (
 
         <section className='2xl:w-9/12 w-11/12 py-20 mx-auto' >

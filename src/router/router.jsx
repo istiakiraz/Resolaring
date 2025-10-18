@@ -19,6 +19,7 @@ import Cart from "../pages/CartPage/Cart";
 import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
 import DeliveryDetails from "../pages/ChangeDeliveryDetails/DeliveryDetails";
 import AccountSettingsPage from "../pages/AccountSettingsPage/AccountSettingsPage";
+import DashboardLayouts from "../layouts/DashboardLayouts";
 
 export const router = createBrowserRouter([
 
@@ -122,6 +123,9 @@ export const router = createBrowserRouter([
             },
         ]
 
-        
+    },
+    {
+        path: '/dashboard',
+        Component: DashboardLayouts
     }
 ])
