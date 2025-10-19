@@ -40,15 +40,7 @@ export default function DashboardLayouts() {
     });
   }
 })
-
-
-
   }
-
-
-
-
-
 
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -109,8 +101,8 @@ export default function DashboardLayouts() {
                 to="/"
               >
                 <div
-                  className={`lg:flex items-center w-fit hidden   p-2 gap-2 
-                ${isDrawerOpen ? 'block' : 'hidden'}
+                  className={`flex items-center   w-fit    p-2 gap-2 
+                ${isDrawerOpen ? 'block' : 'hidden lg:flex'}
                      `}>
                   <img src={logo} alt="Resolaring Logo" className="h-8 w-auto" />
                   <span className="text-2xl text-white font-semibold">Resolaring</span>

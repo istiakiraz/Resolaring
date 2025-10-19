@@ -40,8 +40,8 @@ export default function AccountSetting() {
 
                 <TabsList className=' bg-white rounded-none  border-b-gray-400 border-b-2 w-full' >
                     <TabsTrigger className=' rounded-none  data-[state=active]:border-b-[#b45c3d] -mb-2 data-[state=active]:shadow-none cursor-pointer border-b-4' value="account"> My Account</TabsTrigger>
-                    <TabsTrigger className=' rounded-none   data-[state=active]:border-b-[#b45c3d] -mb-2 data-[state=active]:shadow-none border-b-4 cursor-pointer' value="password">My Addresses</TabsTrigger>
-                    <TabsTrigger className=' rounded-none   data-[state=active]:border-b-[#b45c3d] -mb-2 data-[state=active]:shadow-none border-b-4 cursor-pointer' value="password1">My Wallet</TabsTrigger>
+                    <TabsTrigger className=' rounded-none   data-[state=active]:border-b-[#b45c3d] -mb-2 data-[state=active]:shadow-none border-b-4 cursor-pointer' value="Addresses">My Addresses</TabsTrigger>
+                    <TabsTrigger className=' rounded-none   data-[state=active]:border-b-[#b45c3d] -mb-2 data-[state=active]:shadow-none border-b-4 cursor-pointer' value="wallet">My Wallet</TabsTrigger>
                 </TabsList>
 
                 {/* account tab  */}
@@ -390,8 +390,48 @@ export default function AccountSetting() {
                     </div>
                 </div></TabsContent>
 
-                <TabsContent value="password">Change your password here.</TabsContent>
-                <TabsContent value="password1">Change your password here.</TabsContent>
+                <TabsContent value="Addresses">
+
+                   <div className='py-5 border-b-2' >
+                     <h4 className='text-2xl font-bold'>My Addresses</h4>
+                    <p className='text-gray-400'>Add and manage the addresses you use often.</p>
+                   </div>
+
+                   <div className='py-5 *:text-gray-500'>
+                    <p>John Doe</p>
+                    <p>Company name</p>
+                    <p>New York, 1212</p>
+                    <p>USA</p>
+                    <p>+442037697855</p>
+
+                    <div className='flex mt-2 gap-5 items-center'>
+                        <button className='font-semibold text-black hover:underline'>Edit</button>
+                        <button className='font-semibold text-black hover:underline'> Remove</button>
+                    </div>
+                   </div>
+
+
+
+                </TabsContent>
+                <TabsContent value="wallet">
+                    <div className='py-5 border-b-2' >
+                     <h4 className='text-2xl font-bold'>My Wallets</h4>
+                    <p className='text-gray-400'>Save your payment details for faster checkout.</p>
+                   </div>
+
+                   <div className='py-5 *:text-gray-500'>
+                    <p>John Doe</p>
+                    <p>Company name</p>
+                    <p>New York, 1212</p>
+                    <p>USA</p>
+                    <p>+442037697855</p>
+
+                    <div className='flex mt-2 gap-5 items-center'>
+                        <button className='font-semibold text-black hover:underline'>Edit</button>
+                        <button className='font-semibold text-black hover:underline'> Remove</button>
+                    </div>
+                   </div>
+                </TabsContent>
             </Tabs>
 
 

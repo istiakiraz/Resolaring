@@ -63,8 +63,13 @@ export default function Product({allProducts}) {
                 
                 {/* sidebar */}
                 <Drawer open={open} onOpenChange={setOpen} direction="left">
+
+                    
           <DrawerTrigger asChild>
+           
             <button className="md:hidden cursor-pointer text-gray-800">
+                <p>Filter</p>
+               
               <FiSidebar color="gray" className="h-6 w-6" />
             </button>
           </DrawerTrigger>
