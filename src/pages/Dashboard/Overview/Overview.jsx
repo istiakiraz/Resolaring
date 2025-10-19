@@ -2,6 +2,8 @@ import React from 'react'
 import PrimaryButton from '../../../common/PrimaryButton'
 import { GoBell, GoPlusCircle } from "react-icons/go";
 import { FcBusinessman } from 'react-icons/fc';
+import OverTable from '../../../components/OverviewComponents/OverTable';
+
 
 
 export default function Overview() {
@@ -52,6 +54,8 @@ export default function Overview() {
 
 
         </div>
+
+        <OverTable></OverTable>
 
 
     </div>
