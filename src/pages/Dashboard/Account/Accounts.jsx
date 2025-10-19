@@ -3,6 +3,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import PrimaryButton from '../../../common/PrimaryButton'
+import { GoBell, GoPlusCircle } from "react-icons/go";
+import { FcBusinessman } from 'react-icons/fc';
 
 import {
     Dialog,
@@ -31,11 +34,31 @@ export default function Accounts() {
 
   return (
    <div className="w-11/12 mx-auto  bg-white ">
+
+     {/* top bar */}
+                <nav className='flex items-center  justify-between' >
+                    <h2 className='text-2xl lg:text-3xl font-bold' >Account Settings</h2>
+                    <div className='flex items-center gap-3' >
+                        <input placeholder='Search for product' className=' px-4 py-2 w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
+                        <PrimaryButton className='w-fit' icon={GoPlusCircle} >
+                            Add Product
+                        </PrimaryButton>
+                        <GoBell size={25} />
+        
+                        <div className='flex items-center gap-2' >
+                            <div className='p-2 rounded-full w-fit bg-gray-200' ><FcBusinessman size={30} /></div>
+                            <span>
+                                <h6 className='font-bold' >John kal</h6>
+                                <p className='text-gray-400' >Seller</p>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
    
-                           <div className="flex justify-between items-center mb-6">
+                           <div className="flex justify-between py-10 items-center mb-6">
                                <h2 className="text-2xl lg:text-3xl font-semibold">Account</h2>
                                <div className="space-x-3">
-                                   <Button className='cursor-pointer rounded-full duration-300 ease-in-out' variant="outline">Discard</Button>
+                                   <Button className='cursor-pointer hover:text-white rounded-full duration-300 ease-in-out' variant="outline">Discard</Button>
                                    <Button className="bg-[#b45c3d] cursor-pointer rounded-full duration-300 ease-in-out hover:bg-[#6c3825] text-white">
                                        Update Info
                                    </Button>
@@ -91,7 +114,7 @@ export default function Accounts() {
                                </div>
    
                                <div className="flex justify-end mt-8 space-x-3">
-                                   <Button className='cursor-pointer rounded-full duration-300 ease-in-out' variant="outline">Discard</Button>
+                                   <Button className='cursor-pointer rounded-full hover:text-white duration-300 ease-in-out' variant="outline">Discard</Button>
                                    <Button className="bg-[#b45c3d] cursor-pointer rounded-full duration-300 ease-in-out hover:bg-[#6c3825] text-white">
                                        Save Changes
                                    </Button>

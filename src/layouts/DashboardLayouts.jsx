@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink, Outlet } from "react-router";
+import { Link, NavLink, Outlet, useNavigate } from "react-router";
 import logo from "../components/svg/footerLogo.svg";
 import { IoBarChartOutline } from "react-icons/io5";
 import { FaListAlt } from "react-icons/fa";
@@ -7,15 +7,50 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 import { AiFillFileAdd } from "react-icons/ai";
 import { MdManageAccounts } from "react-icons/md";
 import { GrDocumentTime } from "react-icons/gr";
-
-import { GoBell, GoPlusCircle } from "react-icons/go";
-import { FcBusinessman } from 'react-icons/fc';
-import PrimaryButton from "../common/PrimaryButton";
-
+import Swal from "sweetalert2";
 
 
 
 export default function DashboardLayouts() {
+
+  const navigate = useNavigate()
+
+
+  const handleLogout = () =>{
+
+    Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#FEC100",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, Log Out!",
+  iconColor: '#FEC100'
+}).then((result) => {
+  if (result.isConfirmed) {
+
+    navigate('/auth/log-in')
+
+    Swal.fire({
+      title: "Log out!",
+      text: "Log out successfully",
+      icon: "success",
+      iconColor: '#FEC100',
+    });
+  }
+})
+
+
+
+  }
+
+
+
+
+
+
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -30,7 +65,7 @@ export default function DashboardLayouts() {
     <div className=" min-h-screen h-full">
       {/* ---   nav ber   --- */}
 
-      <nav className="sticky top-0 z-100 w-full bg-minor">
+      <nav className="sticky top-0 z-50 w-fit bg-minor">
         <div className="px-3 py-3 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between ">
             <div className="flex items-center justify-start rtl:justify-end">
@@ -83,24 +118,7 @@ export default function DashboardLayouts() {
               </Link>
 
             </div>
-            {/* <nav className='flex items-center w-full pl-30 pr-10 justify-between' >
-                          <h2 className='text-2xl lg:text-3xl font-bold' >Overview</h2>
-                          <div className='flex items-center gap-2' >
-                              <input placeholder='Search for product' className=' px-4 py-2 w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
-                              <PrimaryButton className='w-fit' icon={GoPlusCircle} >
-                                  Add Product
-                              </PrimaryButton>
-                              <GoBell size={25} />
-              
-                              <div className='flex items-center gap-2' >
-                                  <div className='p-2 rounded-full w-fit bg-gray-200' ><FcBusinessman size={30} /></div>
-                                  <span>
-                                      <h6 className='font-bold' >John kal</h6>
-                                      <p className='text-gray-400' >Seller</p>
-                                  </span>
-                              </div>
-                          </div>
-                      </nav> */}
+            
           </div>
         </div>
       </nav>
@@ -157,7 +175,7 @@ export default function DashboardLayouts() {
 
             <li>
               <NavLink
-                to="/dashboard/manage-slots"
+                to="/dashboard/order"
                 onClick={closeDrawer}
                 className={({ isActive }) =>
                   `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
@@ -182,18 +200,18 @@ export default function DashboardLayouts() {
           </ul>
 
           {/* ✅ Bottom Back Button */}
-          <div className="mb-6 mx-auto w-full px-6 hover:bg-accent duration-300 ease-in-out py-3  text-white">
-            <Link onClick={closeDrawer} to="/auth/log-in">
-              <button className="flex gap-2 items-center">
+          <div onClick={handleLogout}  className="mb-6 mx-auto cursor-pointer w-full px-6 hover:bg-accent duration-300 ease-in-out py-3  text-white">
+            {/* <Link onClick={closeDrawer} to="/auth/log-in"> */}
+              <button  className="flex gap-2 cursor-pointer items-center">
                 <RiLogoutBoxRLine size={25} />
                 Log out
               </button>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
       </div>
 
-      <div className="p-4 lg:-mt-15 lg:ml-54">
+      <div className="p-4 z-60 lg:-mt-15 lg:ml-54">
         <Outlet />
       </div>
     </div>

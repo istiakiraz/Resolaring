@@ -23,6 +23,7 @@ import DashboardLayouts from "../layouts/DashboardLayouts";
 import path from "path";
 import Accounts from "../pages/Dashboard/Account/Accounts";
 import Overview from "../pages/Dashboard/Overview/Overview";
+import Order from "../pages/Dashboard/OrderList/Order";
 
 export const router = createBrowserRouter([
 
@@ -138,6 +139,10 @@ export const router = createBrowserRouter([
             {
                 path: 'accounts',
                 Component: Accounts,
+            },
+            {
+                path:'order',
+                Component:Order
             }
         ]
     }

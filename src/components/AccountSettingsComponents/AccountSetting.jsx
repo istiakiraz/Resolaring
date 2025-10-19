@@ -52,7 +52,7 @@ export default function AccountSetting() {
                         <div className="flex justify-between items-center mb-6">
                             <h2 className="text-2xl font-semibold">Account</h2>
                             <div className="space-x-3">
-                                <Button className='cursor-pointer rounded-full duration-300 ease-in-out' variant="outline">Discard</Button>
+                                <Button className='cursor-pointer rounded-full hover:text-white duration-300 ease-in-out' variant="outline">Discard</Button>
                                 <Button className="bg-[#b45c3d] cursor-pointer rounded-full duration-300 ease-in-out hover:bg-[#6c3825] text-white">
                                     Update Info
                                 </Button>
@@ -108,7 +108,7 @@ export default function AccountSetting() {
                             </div>
 
                             <div className="flex justify-end mt-8 space-x-3">
-                                <Button className='cursor-pointer rounded-full duration-300 ease-in-out' variant="outline">Discard</Button>
+                                <Button className='cursor-pointer rounded-full hover:text-white duration-300 ease-in-out' variant="outline">Discard</Button>
                                 <Button className="bg-[#b45c3d] cursor-pointer rounded-full duration-300 ease-in-out hover:bg-[#6c3825] text-white">
                                     Save Changes
                                 </Button>
