@@ -102,10 +102,8 @@ export default function Product({allProducts}) {
                     {/* price filter */}
 
                     <div>
-
                         <h6 className="font-bold text-sm lg:text-2xl border-b border-gray-200 w-fit pb-2">Price Range</h6>
                         <p className="text-gray-700 mt-2"  >Price: $100 - $650,000</p>
-
                     </div>
                 </div>
 
@@ -173,8 +171,6 @@ export default function Product({allProducts}) {
                 />
 
             </div>
-
-
         </section>
     );
 }

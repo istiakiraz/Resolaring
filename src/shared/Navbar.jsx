@@ -87,18 +87,20 @@ export default function Navbar() {
             </button>
           </DrawerTrigger>
 
-          <DrawerContent className="h-full w-3/4 sm:w-1/2 bg-white fixed left-0 top-0 shadow-lg rounded-none">
-            <DrawerHeader className="flex items-center justify-between border-b">
-              <DrawerTitle className="text-lg font-semibold">Menu</DrawerTitle>
+          <DrawerContent className="h-full w-3/4 sm:w-1/2 bg-white fixed left-0 top-0  rounded-none">
+            <DrawerHeader className="flex items-end justify-end ">
+    
               <DrawerClose asChild>
-                <button className="text-gray-700 p-2">
+                <button className="text-gray-700  p-2">
                   <X className="h-5 w-5" />
                 </button>
               </DrawerClose>
             </DrawerHeader>
 
-            <nav className="flex flex-col p-5 space-y-4">
-              {navLinks.map((link) => (
+            <nav className="flex flex-col justify-between  h-full">
+              
+             <div className="flex flex-col p-5 pt-0 space-y-4">
+               {navLinks.map((link) => (
                 <NavLink
                   key={link.to}
                   to={link.to}
@@ -108,11 +110,13 @@ export default function Navbar() {
                   {link.label}
                 </NavLink>
               ))}
+             </div>
 
-              <Link
+           <div className="flex flex-col p-5 pt-0 space-y-4" >
+               <Link
                 to="/account-settings"
                 onClick={() => setOpen(false)}
-                className="bg-yellow-400 text-black text-sm px-4 py-2 rounded-full font-medium hover:bg-yellow-500 transition text-center"
+                className="bg-yellow-400 text-black text-sm duration-75 px-4 py-2 rounded-full font-medium hover:bg-yellow-500 transition text-center"
               >
                 Become a Seller →
               </Link>
@@ -125,6 +129,7 @@ export default function Navbar() {
                 <LogIn className="h-4 w-4 mr-1" />
                 Login
               </Link>
+           </div>
             </nav>
           </DrawerContent>
         </Drawer>

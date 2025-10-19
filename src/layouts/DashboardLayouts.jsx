@@ -73,11 +73,11 @@ export default function DashboardLayouts() {
               <button
                 onClick={toggleDrawer}
                 type="button"
-                className="inline-flex  p-2 text-sm  rounded-lg lg:hidden bg-accent cursor-pointer focus:outline-none focus:ring-2 relative w-10 h-10 justify-center items-center"
+                className="inline-flex  p-2    lg:hidden  cursor-pointer bg-primary focus:outline-none focus:ring-2 relative w-10 h-10 justify-center items-center"
               >
                 {/* Hamburger Icon */}
                 <svg
-                  className={`absolute w-6 h-6 transition-all duration-300 ${isDrawerOpen
+                  className={`absolute w-6 text-secondary h-6 transition-all duration-300 ${isDrawerOpen
                       ? "opacity-0 scale-75 rotate-45"
                       : "opacity-100 scale-100 rotate-0"
                     }`}
@@ -92,7 +92,7 @@ export default function DashboardLayouts() {
                 </svg>
 
                 <svg
-                  className={`absolute w-6 h-6 transition-all duration-300 ${isDrawerOpen
+                  className={`absolute w-6 h-6 text-secondary transition-all duration-300 ${isDrawerOpen
                       ? "opacity-100 scale-100 rotate-0"
                       : "opacity-0 scale-75 rotate-45"
                     }`}
