@@ -42,11 +42,10 @@ export default function DashboardLayouts() {
               >
                 {/* Hamburger Icon */}
                 <svg
-                  className={`absolute w-6 h-6 transition-all duration-300 ${
-                    isDrawerOpen
+                  className={`absolute w-6 h-6 transition-all duration-300 ${isDrawerOpen
                       ? "opacity-0 scale-75 rotate-45"
                       : "opacity-100 scale-100 rotate-0"
-                  }`}
+                    }`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -58,11 +57,10 @@ export default function DashboardLayouts() {
                 </svg>
 
                 <svg
-                  className={`absolute w-6 h-6 transition-all duration-300 ${
-                    isDrawerOpen
+                  className={`absolute w-6 h-6 transition-all duration-300 ${isDrawerOpen
                       ? "opacity-100 scale-100 rotate-0"
                       : "opacity-0 scale-75 rotate-45"
-                  }`}
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -75,19 +73,17 @@ export default function DashboardLayouts() {
               <Link
                 to="/"
               >
-              <div 
-              className={`lg:flex items-center w-fit hidden   p-2 gap-2 
-                ${
-                    isDrawerOpen ? 'block' : 'hidden' }
+                <div
+                  className={`lg:flex items-center w-fit hidden   p-2 gap-2 
+                ${isDrawerOpen ? 'block' : 'hidden'}
                      `}>
-                            <img src={logo} alt="Resolaring Logo" className="h-8 w-auto" />
-                            <span className="text-2xl text-white font-semibold">Resolaring</span>
-                          </div>
+                  <img src={logo} alt="Resolaring Logo" className="h-8 w-auto" />
+                  <span className="text-2xl text-white font-semibold">Resolaring</span>
+                </div>
               </Link>
 
-              
             </div>
-             <nav className='flex items-center w-full pl-30 pr-10 justify-between' >
+            {/* <nav className='flex items-center w-full pl-30 pr-10 justify-between' >
                           <h2 className='text-2xl lg:text-3xl font-bold' >Overview</h2>
                           <div className='flex items-center gap-2' >
                               <input placeholder='Search for product' className=' px-4 py-2 w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
@@ -104,7 +100,7 @@ export default function DashboardLayouts() {
                                   </span>
                               </div>
                           </div>
-                      </nav>
+                      </nav> */}
           </div>
         </div>
       </nav>
@@ -124,70 +120,80 @@ export default function DashboardLayouts() {
               <NavLink
                 to="/dashboard/overview"
                 onClick={closeDrawer}
-                className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
+                className={({ isActive }) =>
+                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
+                }
               >
                 <IoBarChartOutline className="text-xl" /> Overview
               </NavLink>
             </li>
-           
-                <li>
-                  <NavLink
-                    to="/dashboard/booked-trainer"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white  hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <AiFillFileAdd className="text-xl" /> Add New Listing
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/dashboard/activity-log"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <FaListAlt className="text-xl" /> Manage Listings
-                  </NavLink>
-                </li>
-             
 
-            
+            <li>
+              <NavLink
+                to="/dashboard/booked-trainer"
+                onClick={closeDrawer}
+                className={({ isActive }) =>
+                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
+                }
+              >
+                <AiFillFileAdd className="text-xl" /> Add New Listing
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/dashboard/activity-log"
+                onClick={closeDrawer}
+                className={({ isActive }) =>
+                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
+                }
+              >
+                <FaListAlt className="text-xl" /> Manage Listings
+              </NavLink>
+            </li>
 
-            
-                <li>
-                  <NavLink
-                    to="/dashboard/manage-slots"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <GrDocumentTime className="text-xl" /> Order List
-                  </NavLink>
-                </li>
 
-                <li>
-                  <NavLink
-                    to="/dashboard/accounts"
-                    onClick={closeDrawer}
-                    className="flex items-center gap-2 p-2 text-white hover:bg-accent duration-300 ease-in-out ms-3 group"
-                  >
-                    <MdManageAccounts size={25} className="text-xl" /> Account Settings
-                  </NavLink>
-                </li>
+
+
+
+            <li>
+              <NavLink
+                to="/dashboard/manage-slots"
+                onClick={closeDrawer}
+                className={({ isActive }) =>
+                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
+                }
+              >
+                <GrDocumentTime className="text-xl" /> Order List
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/dashboard/accounts"
+                onClick={closeDrawer}
+                className={({ isActive }) =>
+                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
+                }
+              >
+                <MdManageAccounts size={25} className="text-xl" /> Account Settings
+              </NavLink>
+            </li>
 
           </ul>
 
           {/* ✅ Bottom Back Button */}
           <div className="mb-6 mx-auto w-full px-6 hover:bg-accent duration-300 ease-in-out py-3  text-white">
             <Link onClick={closeDrawer} to="/auth/log-in">
-            <button className="flex gap-2 items-center">
+              <button className="flex gap-2 items-center">
                 <RiLogoutBoxRLine size={25} />
                 Log out
-            </button>
+              </button>
             </Link>
           </div>
         </div>
       </div>
 
-      <div className="p-4 lg:ml-54">
+      <div className="p-4 lg:-mt-15 lg:ml-54">
         <Outlet />
       </div>
     </div>

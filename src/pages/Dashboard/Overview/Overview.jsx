@@ -7,9 +7,11 @@ import { FcBusinessman } from 'react-icons/fc';
 export default function Overview() {
   return (
     <div className=' w-11/12 mx-auto' >
-        {/* <nav className='flex items-center justify-between' >
+
+        {/* top bar */}
+        <nav className='flex items-center justify-between' >
             <h2 className='text-2xl lg:text-3xl font-bold' >Overview</h2>
-            <div className='flex items-center gap-2' >
+            <div className='flex items-center gap-3' >
                 <input placeholder='Search for product' className=' px-4 py-2 w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
                 <PrimaryButton className='w-fit' icon={GoPlusCircle} >
                     Add Product
@@ -24,7 +26,32 @@ export default function Overview() {
                     </span>
                 </div>
             </div>
-        </nav> */}
+        </nav>
+
+        {/* number content  */}
+
+        <div className='py-10 grid 2xl:grid-cols-4 *:hover:scale-105 *:duration-300 *:ease-in-out *:hover:shadow *:cursor-grab items-center gap-4  '>
+
+            <div className='bg-pink-100 rounded-xl p-4 ' >
+                <p className=' text-gray-400 mb-2' >Total Listing</p>
+                <h6 className='text-2xl font-bold'>15</h6>
+            </div>
+            <div className='bg-yellow-100 rounded-xl p-4 ' >
+                <p className=' text-gray-400 mb-2' >Pending Orders</p>
+                <h6 className='text-2xl font-bold'>3</h6>
+            </div>
+            <div className='bg-green-100 rounded-xl p-4 ' >
+                <p className=' text-gray-400 mb-2' >Sales Revenue</p>
+                <h6 className='text-2xl font-bold'>$5,000</h6>
+            </div>
+            <div className='bg-purple-100 rounded-xl p-4 ' >
+                <p className=' text-gray-400 mb-2' >Profile Completion</p>
+                <h6 className='text-2xl font-bold'>90% Done</h6>
+            </div>
+
+
+
+        </div>
 
 
     </div>
