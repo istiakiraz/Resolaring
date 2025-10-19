@@ -24,6 +24,7 @@ import path from "path";
 import Accounts from "../pages/Dashboard/Account/Accounts";
 import Overview from "../pages/Dashboard/Overview/Overview";
 import Order from "../pages/Dashboard/OrderList/Order";
+import UploadProduct from "../pages/Dashboard/AddNewListing/UploadProduct";
 
 export const router = createBrowserRouter([
 
@@ -133,7 +134,7 @@ export const router = createBrowserRouter([
         Component: DashboardLayouts,
         children:[
             {
-                path:'overview',
+               path:'overview',
                 Component: Overview,
             },
             {
@@ -143,6 +144,10 @@ export const router = createBrowserRouter([
             {
                 path:'order',
                 Component:Order
+            },
+            {
+                path: 'add-new-product',
+                Component:UploadProduct
             }
         ]
     }
