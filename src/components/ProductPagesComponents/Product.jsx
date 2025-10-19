@@ -6,11 +6,20 @@ import PrimaryButton from "../../common/PrimaryButton";
 import { FaArrowRightLong } from "react-icons/fa6";
 import bgImg from '../svg/CtaBg-product.svg'
 import { Link } from "react-router";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+  DrawerHeader,
+  DrawerClose,
+  DrawerTitle,
+} from "@/components/ui/drawer";
+import { Menu, X } from "lucide-react";
+import { FiSidebar } from "react-icons/fi";
 
 export default function Product({allProducts}) {
+    const [open, setOpen] = useState(false);
    
-
-
     const manufacturers = ["Canadian Solar", "Trina Solar", "LONGi Solar", "JA Solar"];
     const productTypes = ["Monocrystalline", "Polycrystalline", "Thin Film"];
 
@@ -53,7 +62,80 @@ export default function Product({allProducts}) {
             <div className="grid grid-cols-8 items-start justify-between gap-10">
                 
                 {/* sidebar */}
-                <div className="space-y-10 col-span-3 md:col-span-2 sticky top-30 z-40">
+                <Drawer open={open} onOpenChange={setOpen} direction="left">
+          <DrawerTrigger asChild>
+            <button className="md:hidden cursor-pointer text-gray-800">
+              <FiSidebar color="gray" className="h-6 w-6" />
+            </button>
+          </DrawerTrigger>
+
+          <DrawerContent className="h-9/12 my-auto pl-10 w-2/4 sm:w-1/2 bg-white fixed left-0 top-0  rounded">
+            <DrawerHeader className="flex items-end justify-end ">
+    
+              <DrawerClose asChild>
+                <button className="text-gray-700  p-2">
+                  <X className="h-5 w-5" />
+                </button>
+              </DrawerClose>
+            </DrawerHeader>
+
+ <div className="space-y-10 col-span-3 md:col-span-2 sticky top-30 z-40">
+                    {/* manufacturer */}
+                    <div>
+                        <h6 className="font-bold text-sm lg:text-2xl border-b border-gray-200 w-fit pb-2">
+                            Manufacturer By
+                        </h6>
+                        <div className="lg:px-4 mt-3 space-y-3">
+                            {manufacturers.map((m) => (
+                                <div key={m} className="flex items-center gap-3">
+                                    <Checkbox
+                                        id={m}
+                                        checked={selectedManufacturers.includes(m)}
+                                        onCheckedChange={() =>
+                                            handleCheckboxChange(m, setSelectedManufacturers, selectedManufacturers)
+                                        }
+                                    />
+                                    <Label htmlFor={m} className="text-gray-700 cursor-pointer">
+                                        {m}
+                                    </Label>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* product type filter */}
+                    <div>
+                        <h6 className="font-bold text-sm lg:text-2xl border-b border-gray-200 w-fit pb-2">Filter by</h6>
+                        <p className="font-bold text-sm lg:text-xl px-4 mt-2">Product Type</p>
+                        <div className="lg:px-4 mt-3 space-y-3">
+                            {productTypes.map((type) => (
+                                <div key={type} className="flex items-center gap-3">
+                                    <Checkbox
+                                        id={type}
+                                        checked={selectedTypes.includes(type)}
+                                        onCheckedChange={() =>
+                                            handleCheckboxChange(type, setSelectedTypes, selectedTypes)
+                                        }
+                                    />
+                                    <Label htmlFor={type} className="text-gray-700 cursor-pointer">
+                                        {type}
+                                    </Label>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* price filter */}
+
+                    <div>
+                        <h6 className="font-bold text-sm lg:text-2xl border-b border-gray-200 w-fit pb-2">Price Range</h6>
+                        <p className="text-gray-700 mt-2"  >Price: $100 - $650,000</p>
+                    </div>
+                </div>
+
+          </DrawerContent>
+        </Drawer>
+                <div className="space-y-10 col-span-3 hidden md:block md:col-span-2 sticky top-30 z-40">
                     {/* manufacturer */}
                     <div>
                         <h6 className="font-bold text-sm lg:text-2xl border-b border-gray-200 w-fit pb-2">
@@ -108,7 +190,7 @@ export default function Product({allProducts}) {
                 </div>
 
                 {/* product cards */}
-                <div className="flex-1 col-span-5 md:col-span-6">
+                <div className="flex-1 col-span-7  md:col-span-6">
                     <p className="mb-6 text-gray-500">{filteredProducts.length} products found</p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
