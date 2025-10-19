@@ -168,7 +168,7 @@ const OverTable = () => {
   });
 
   return (
-    <div className="">
+    <div >
       <h2 className="text-2xl font-semibold mb-4">Order History</h2>
       <div className="overflow-x-auto rounded-lg border border-gray-100 shadow-sm">
         <table className="min-w-full text-left text-sm">

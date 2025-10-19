@@ -159,7 +159,7 @@ export default function DashboardLayouts() {
             </li>
             <li>
               <NavLink
-                to="/dashboard/activity-log"
+                to="/dashboard/manage-listings"
                 onClick={closeDrawer}
                 className={({ isActive }) =>
                   `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`

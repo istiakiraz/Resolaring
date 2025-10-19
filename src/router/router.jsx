@@ -25,6 +25,7 @@ import Accounts from "../pages/Dashboard/Account/Accounts";
 import Overview from "../pages/Dashboard/Overview/Overview";
 import Order from "../pages/Dashboard/OrderList/Order";
 import UploadProduct from "../pages/Dashboard/AddNewListing/UploadProduct";
+import ManageListings from "../pages/Dashboard/ManageListings/ManageListings";
 
 export const router = createBrowserRouter([
 
@@ -148,6 +149,10 @@ export const router = createBrowserRouter([
             {
                 path: 'add-new-product',
                 Component:UploadProduct
+            },
+            {
+                path:"manage-listings",
+                Component: ManageListings
             }
         ]
     }

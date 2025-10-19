@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,17 +16,13 @@ import { FcBusinessman } from 'react-icons/fc';
 
 export default function UploadProduct() {
 
-
-
-
-
   return (
     <div className="w-11/12 mx-auto">
 
 
  {/* top bar */}
         <nav className='flex items-center justify-between' >
-            <h2 className='text-2xl lg:text-3xl font-bold' >Overview</h2>
+            <h2 className='text-2xl lg:text-3xl font-bold' >Add New Listing</h2>
             <div className='flex items-center gap-3' >
                 <input placeholder='Search for product' className=' px-4 py-2 w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
                 <PrimaryButton className='w-fit' icon={GoPlusCircle} >
@@ -102,7 +98,7 @@ export default function UploadProduct() {
                 Brand Name
               </label>
               <Select >
-                <SelectTrigger className='w-96 bg-gray-100' >
+                <SelectTrigger className='min-w-full bg-gray-100' >
                   <SelectValue placeholder="Choose" />
                 </SelectTrigger>
                 <SelectContent>
@@ -125,7 +121,7 @@ export default function UploadProduct() {
                 Condition
               </label>
               <Select>
-                <SelectTrigger className='w-96 bg-gray-100'>
+                <SelectTrigger className='min-w-full bg-gray-100'>
                   <SelectValue placeholder="Choose" />
                 </SelectTrigger>
                 <SelectContent>
