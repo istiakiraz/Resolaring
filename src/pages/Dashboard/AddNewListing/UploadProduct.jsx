@@ -17,13 +17,13 @@ import { FcBusinessman } from 'react-icons/fc';
 export default function UploadProduct() {
 
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="md:w-11/12 -mt-14 mx-auto">
 
 
  {/* top bar */}
-        <nav className='flex flex-col lg:flex-row  items-start justify-between' >
-            <h2 className='text-2xl lg:text-3xl mb-2 lg:mb-0 font-bold' >Add New Listing</h2>
-            <div className='flex flex-wrap items-center gap-3' >
+        <nav className='flex sticky top-0 bg-white py-5   items-center justify-end gap-5 md:gap-0 lg:justify-between' >
+            <h2 className='md:text-2xl text-xl lg:text-3xl mb-2 lg:mb-0 font-bold' >Add New Listing</h2>
+            <div className='flex  items-center gap-3' >
                 
                 <GoBell size={25} />
 

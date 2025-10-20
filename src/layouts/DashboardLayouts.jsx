@@ -41,8 +41,6 @@ export default function DashboardLayouts() {
       }
     })
   }
-
-
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -96,9 +94,6 @@ export default function DashboardLayouts() {
                   <path d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-
-
-
             </div>
           </div>
         </div>

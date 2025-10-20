@@ -144,14 +144,14 @@ export default function ManageListings() {
 
 
   return (
-    <div className='w-11/12 mx-auto'>
+    <div className='md:w-11/12 mx-auto'>
 
          {/* top bar */}
-                <nav className='flex flex-col lg:flex-row  items-start justify-between' >
-                    <h2 className='text-2xl lg:text-3xl mb-2 lg:mb-0 font-bold' >Manage Listings</h2>
-                    <div className='flex flex-wrap  items-start lg:items-center gap-3' >
-                        <input placeholder='Search for product' className=' px-4 py-2 lg:w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
-                        <PrimaryButton className='w-fit' icon={GoPlusCircle} >
+                <nav className='flex sticky top-0 bg-white py-5 -mt-14 items-center justify-end gap-5 lg:justify-between' >
+                    <h2 className='md:text-2xl text-xl lg:text-3xl w-fit mb-2 lg:mb-0 font-bold' >Manage Listings</h2>
+                    <div className='flex   items-center lg:items-center gap-3' >
+                        <input placeholder='Search for product' className=' px-4 py-2 hidden xl:block lg:w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
+                        <PrimaryButton className=' hidden md:flex w-fit' icon={GoPlusCircle} >
                             Add Product
                         </PrimaryButton>
                         <GoBell size={25} />
@@ -169,7 +169,7 @@ export default function ManageListings() {
 
          <div className='py-10' >
               <h2 className="text-2xl font-semibold mb-4">Listings</h2>
-              <div className="overflow-x-auto rounded-lg border border-gray-100 shadow-sm">
+              <div className="overflow-x-auto rounded-lg ">
                 <table className="min-w-full text-left text-sm">
                   <thead className="bg-slate-900 text-white">
                     {table.getHeaderGroups().map((headerGroup) => (
