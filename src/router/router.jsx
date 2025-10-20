@@ -135,7 +135,7 @@ export const router = createBrowserRouter([
         Component: DashboardLayouts,
         children:[
             {
-               path:'overview',
+              index: true,
                 Component: Overview,
             },
             {

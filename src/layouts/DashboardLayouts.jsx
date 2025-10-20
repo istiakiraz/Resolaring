@@ -128,11 +128,12 @@ export default function DashboardLayouts() {
 
             <li>
               <NavLink
-                to="/dashboard/overview"
+                to="/dashboard"
                 onClick={closeDrawer}
                 className={({ isActive }) =>
                   `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
                 }
+                end
               >
                 <IoBarChartOutline className="text-xl" /> Overview
               </NavLink>
@@ -145,6 +146,7 @@ export default function DashboardLayouts() {
                 className={({ isActive }) =>
                   `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
                 }
+                end
               >
                 <AiFillFileAdd className="text-xl" /> Add New Listing
               </NavLink>
@@ -156,6 +158,7 @@ export default function DashboardLayouts() {
                 className={({ isActive }) =>
                   `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
                 }
+                end
               >
                 <FaListAlt className="text-xl" /> Manage Listings
               </NavLink>
@@ -172,6 +175,7 @@ export default function DashboardLayouts() {
                 className={({ isActive }) =>
                   `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
                 }
+                end
               >
                 <GrDocumentTime className="text-xl" /> Order List
               </NavLink>
@@ -184,6 +188,7 @@ export default function DashboardLayouts() {
                 className={({ isActive }) =>
                   `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
                 }
+                end
               >
                 <MdManageAccounts size={25} className="text-xl" /> Account Settings
               </NavLink>
