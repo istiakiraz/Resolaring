@@ -21,7 +21,7 @@ export default function Header() {
         <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
          Reusing solar energy
         </h1>
-        <p className="text-lg md:text-xl text-left lg:w-6/12 mb-6 text-gray-200">
+        <p className=" md:text-xl text-left lg:w-6/12 mb-6 text-gray-200">
          At Resolaring we are committed to giving photovoltaic panels a second life. We make agreements with suppliers and installers so that the panels do not end up in landfills.
         </p>
         <div className="flex flex-col md:flex-row items-start gap-4 justify-start">

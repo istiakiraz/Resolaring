@@ -65,14 +65,17 @@ export default function Product({allProducts}) {
                 <Drawer open={open} onOpenChange={setOpen} direction="left">
 
                     
-          <DrawerTrigger asChild>
+        <div className="flex items-center col-span-full md:hidden justify-between">
+              <DrawerTrigger asChild>
            
-            <button className="md:hidden cursor-pointer text-gray-800">
+            <button className=" cursor-pointer text-gray-800">
                 <p>Filter</p>
                
               <FiSidebar color="gray" className="h-6 w-6" />
             </button>
           </DrawerTrigger>
+           <p className="mb-6 text-gray-500">{filteredProducts.length} products found</p>
+        </div>
 
           <DrawerContent className="h-9/12 my-auto pl-10 w-2/4 sm:w-1/2 bg-white fixed left-0 top-0  rounded">
             <DrawerHeader className="flex items-end justify-end ">
@@ -195,8 +198,8 @@ export default function Product({allProducts}) {
                 </div>
 
                 {/* product cards */}
-                <div className="flex-1 col-span-7  md:col-span-6">
-                    <p className="mb-6 text-gray-500">{filteredProducts.length} products found</p>
+                <div className="flex-1 col-span-8  md:col-span-6">
+                    <p className="mb-6 hidden lg:block text-gray-500">{filteredProducts.length} products found</p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filteredProducts.map((product) => (
@@ -241,10 +244,10 @@ export default function Product({allProducts}) {
                 </div>
             </div>
 
-            <div className="bg-yellow-100 rounded-2xl text-center mt-20 py-20 flex flex-col bg-cover bg-center justify-center items-center p-8"
+            <div className="bg-yellow-100 rounded-2xl text-center mt-20 py-20 flex flex-col bg-cover bg-center justify-center items-center p-4 lg:p-8"
                 style={{ backgroundImage: `url(${bgImg})` }}
             >
-                <h3 className="text-5xl lg:w-6/12  mx-auto text-white font-semibold mb-4">
+                <h3 className="lg:text-5xl text-3xl  lg:w-6/12  mx-auto text-white font-semibold mb-4">
                     Join the community and post your panels
                 </h3>
                 <p className="text-white my-4">Subscribe Our Newsletter For Latest Updates</p>

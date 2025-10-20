@@ -62,7 +62,7 @@ export default function GalleryProductDetails() {
 
 
 
-     <div className="max-w-11/12 2xl:max-w-9/12 mx-auto py-10 px-4">
+     <div className=" md:w-11/12 2xl:max-w-9/12 mx-auto py-10 px-4">
 
       {/* title */}
       <h1 className="text-3xl font-semibold">{product.title}</h1>

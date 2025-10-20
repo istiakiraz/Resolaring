@@ -31,7 +31,7 @@ export default function Hero() {
          <PrimaryButton to="/marketplace" icon={FaArrowRightLong}>
 Browse Marketplace
          </PrimaryButton>
-         <SecondaryButton to="/sell-equipment">
+         <SecondaryButton to="/dashboard">
   Sell Your Equipment
 </SecondaryButton>
         </div>

@@ -21,7 +21,7 @@ export default function BookHeader() {
                 <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
                     Ask a Question about Product
                 </h1>
-                <p className="text-lg md:text-xl w-6/12 mb-6 text-gray-200">
+                <p className=" md:text-xl w-6/12 mb-6 text-gray-200">
                     Check out our availability and book the date and time that works for you
                 </p>
 

@@ -21,7 +21,7 @@ export default function ProductPagesHeader() {
                 <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
                     Your market for solar panels
                 </h1>
-                <p className="text-lg md:text-xl lg:w-6/12 mb-6 text-gray-200">
+                <p className=" md:text-xl lg:w-6/12 mb-6 text-gray-200">
                     Exploring Market Opportunities, Industry Trends, and Growing Demand for Solar Panels in the Renewable Energy Sector.
                 </p>
                 <div className="flex flex-col md:flex-row items-start gap-4 justify-start">

@@ -30,8 +30,8 @@ export default function GalleryProduct({ products }) {
 
       <section className="py-10 z-10 relative 2xl:max-w-9/12 max-w-11/12 mx-auto">
 
-        <div className='flex items-center justify-between mb-6  ' >
-          <h2 className="text-4xl font-bold mb-6 text-center md:text-left">Anuncia els teus panells solars</h2>
+        <div className='flex items-center flex-col space-y-3 md:flex-row justify-between mb-6  ' >
+          <h2 className="text-4xl font-bold  text-center md:text-left">Anuncia els teus panells solars</h2>
 
 
           <Dialog>

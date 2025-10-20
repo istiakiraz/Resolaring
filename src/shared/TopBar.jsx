@@ -14,12 +14,12 @@ export default function TopBar() {
         {/* left side */}
         <div className='flex  items-center gap-10' >
           {/* call icon */}
-          <div className='flex gap-3 items-center' >
+          <div className='md:flex gap-3 hidden  items-center' >
             <VscCallOutgoing size={30} color='#FEC100' />
-            <span className='text-white'>
+            <div className='text-white'>
               <h4 className='text-[12px] text-gray-200 ' >Need help?</h4>
               <h4>+34618207554</h4>
-            </span>
+            </div>
           </div>
 
           {/* input */}
@@ -29,16 +29,16 @@ export default function TopBar() {
         {/* right side */}
         <div className='flex items-center gap-3'>
 
-          <span className='flex border border-white rounded-4xl items-center gap-2 px-3 py-2'>
+          <div className='flex border border-white rounded-4xl items-center gap-2 px-3 py-2'>
             <TfiWorld color='white' />
             <p className='text-white' >EN</p>
-          </span>
+          </div>
 
 
-          <span className='bg-white p-2 hover:bg-gray-100 duration-300 ease-in-out rounded-full' >
+          <div className='bg-white p-2 hover:bg-gray-100 duration-300 ease-in-out rounded-full' >
             <Link to='/cart' >
               <AiOutlineShoppingCart size={25} /> </Link>
-          </span>
+          </div>
 
           <p className='text-white'>$98.29</p>
 

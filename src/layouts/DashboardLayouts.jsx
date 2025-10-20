@@ -16,30 +16,30 @@ export default function DashboardLayouts() {
   const navigate = useNavigate()
 
 
-  const handleLogout = () =>{
+  const handleLogout = () => {
 
     Swal.fire({
-  title: "Are you sure?",
-  text: "You won't be able to revert this!",
-  icon: "warning",
-  showCancelButton: true,
-  confirmButtonColor: "#FEC100",
-  cancelButtonColor: "#d33",
-  confirmButtonText: "Yes, Log Out!",
-  iconColor: '#FEC100'
-}).then((result) => {
-  if (result.isConfirmed) {
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#FEC100",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Log Out!",
+      iconColor: '#FEC100'
+    }).then((result) => {
+      if (result.isConfirmed) {
 
-    navigate('/auth/log-in')
+        navigate('/auth/log-in')
 
-    Swal.fire({
-      title: "Log out!",
-      text: "Log out successfully",
-      icon: "success",
-      iconColor: '#FEC100',
-    });
-  }
-})
+        Swal.fire({
+          title: "Log out!",
+          text: "Log out successfully",
+          icon: "success",
+          iconColor: '#FEC100',
+        });
+      }
+    })
   }
 
 
@@ -57,21 +57,21 @@ export default function DashboardLayouts() {
     <div className=" min-h-screen h-full">
       {/* ---   nav ber   --- */}
 
-      <nav className="sticky top-0 z-50 w-fit bg-minor">
+      <nav className="sticky top-0 z-50 w-fit ">
         <div className="px-3 py-3 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between ">
             <div className="flex items-center justify-start rtl:justify-end">
-              {/* ✅ Drawer Toggle Button with animation */}
+              {/*  drawer Toggle Btn */}
               <button
                 onClick={toggleDrawer}
                 type="button"
-                className="inline-flex  p-2    lg:hidden  cursor-pointer bg-primary focus:outline-none focus:ring-2 relative w-10 h-10 justify-center items-center"
+                className="inline-flex  p-2   lg:hidden  cursor-pointer bg-primary focus:outline-none focus:ring-2 relative w-10 h-10 justify-center items-center"
               >
-                {/* Hamburger Icon */}
+                {/* hamburger icon */}
                 <svg
                   className={`absolute w-6 text-secondary h-6 transition-all duration-300 ${isDrawerOpen
-                      ? "opacity-0 scale-75 rotate-45"
-                      : "opacity-100 scale-100 rotate-0"
+                    ? "opacity-0 scale-75 rotate-45"
+                    : "opacity-100 scale-100 rotate-0"
                     }`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -85,8 +85,8 @@ export default function DashboardLayouts() {
 
                 <svg
                   className={`absolute w-6 h-6 text-secondary transition-all duration-300 ${isDrawerOpen
-                      ? "opacity-100 scale-100 rotate-0"
-                      : "opacity-0 scale-75 rotate-45"
+                    ? "opacity-100 scale-100 rotate-0"
+                    : "opacity-0 scale-75 rotate-45"
                     }`}
                   fill="none"
                   stroke="currentColor"
@@ -97,33 +97,35 @@ export default function DashboardLayouts() {
                 </svg>
               </button>
 
-              <Link
-                to="/"
-              >
-                <div
-                  className={`flex items-center   w-fit    p-2 gap-2 
-                ${isDrawerOpen ? 'block' : 'hidden lg:flex'}
-                     `}>
-                  <img src={logo} alt="Resolaring Logo" className="h-8 w-auto" />
-                  <span className="text-2xl text-white font-semibold">Resolaring</span>
-                </div>
-              </Link>
+
 
             </div>
-            
           </div>
         </div>
       </nav>
 
       {/* ---   drawer   --- */}
-
       <div
-        className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20  transition-transform duration-300 bg-primary border-r border-primary 
+        className={`fixed top-0 left-0 z-40 w-64 h-screen lg:pt-5 pt-15 transition-transform duration-300 bg-primary border-r border-primary 
         ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"} 
         lg:translate-x-0`}
       >
-        <div className="h-full pb-4 overflow-y-auto bg-primary flex flex-col justify-between">
-          <ul className="space-y-2 font-medium">
+        <div className="h-full pb-4  overflow-y-auto bg-primary flex flex-col justify-between">
+
+          <ul className="space-y-2  font-medium">
+
+            <Link
+              to="/"
+            >
+              <div
+                className={`flex items-center mb-6 px-4  w-fit  p-2 gap-2 
+      
+                     `}>
+                <img src={logo} alt="Resolaring Logo" className="h-8 w-auto" />
+                <span className="text-2xl text-white font-semibold">Resolaring</span>
+              </div>
+            </Link>
+
             {/* user dash link */}
 
             <li>
@@ -165,9 +167,6 @@ export default function DashboardLayouts() {
             </li>
 
 
-
-
-
             <li>
               <NavLink
                 to="/dashboard/order"
@@ -197,18 +196,19 @@ export default function DashboardLayouts() {
           </ul>
 
           {/* ✅ Bottom Back Button */}
-          <div onClick={handleLogout}  className="mb-6 mx-auto cursor-pointer w-full px-6 hover:bg-accent duration-300 ease-in-out py-3  text-white">
+          <div onClick={handleLogout} className="mb-6 mx-auto cursor-pointer w-full px-6 hover:bg-accent duration-300 ease-in-out py-3  text-white">
             {/* <Link onClick={closeDrawer} to="/auth/log-in"> */}
-              <button  className="flex gap-2 cursor-pointer items-center">
-                <RiLogoutBoxRLine size={25} />
-                Log out
-              </button>
+            <button className="flex gap-2 cursor-pointer items-center">
+              <RiLogoutBoxRLine size={25} />
+              Log out
+            </button>
             {/* </Link> */}
           </div>
         </div>
       </div>
 
-      <div className="p-4 z-60 lg:-mt-15 lg:ml-54">
+      {/* outlet */}
+      <div className="p-4 pt-0 z-60 lg:ml-54">
         <Outlet />
       </div>
     </div>
