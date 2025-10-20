@@ -37,7 +37,7 @@ export default function Accounts() {
 
      {/* top bar */}
                 <nav className='flex   items-center sticky top-0 bg-white py-5 justify-end gap-5  lg:justify-between' >
-                    <h2 className='text-2xl lg:text-3xl mb-2 lg:mb-0 font-bold' >Account Settings</h2>
+                    <h2 className='text-xl md:text-2xl lg:text-3xl mb-2 lg:mb-0 font-bold' >Account Settings</h2>
                     <div className='flex  items-center gap-3' >
                         <input placeholder='Search for product' className=' px-4 hidden xl:block py-2 w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
                         <PrimaryButton className='w-fit hidden md:flex' icon={GoPlusCircle} >

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink, Outlet, useNavigate } from "react-router";
+import { Link, NavLink, Outlet, ScrollRestoration, useNavigate } from "react-router";
 import logo from "../components/svg/footerLogo.svg";
 import { IoBarChartOutline } from "react-icons/io5";
 import { FaListAlt } from "react-icons/fa";
@@ -53,6 +53,8 @@ export default function DashboardLayouts() {
 
   return (
     <div className=" min-h-screen h-full">
+        <ScrollRestoration />
+
       {/* ---   nav ber   --- */}
 
       <nav className="sticky top-0 z-50 w-fit ">

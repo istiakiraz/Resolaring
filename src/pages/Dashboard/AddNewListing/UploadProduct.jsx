@@ -21,7 +21,7 @@ export default function UploadProduct() {
 
 
  {/* top bar */}
-        <nav className='flex sticky top-0 bg-white py-5   items-center justify-end gap-5 md:gap-0 lg:justify-between' >
+        <nav className='flex sticky top-0 bg-white py-5  items-center justify-end gap-5  lg:justify-between' >
             <h2 className='md:text-2xl text-xl lg:text-3xl mb-2 lg:mb-0 font-bold' >Add New Listing</h2>
             <div className='flex  items-center gap-3' >
                 
