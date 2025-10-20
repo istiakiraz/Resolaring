@@ -1,213 +1,212 @@
-import React, { useState } from "react";
-import { Link, NavLink, Outlet, ScrollRestoration, useNavigate } from "react-router";
+import React from "react";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from "react-router";
 import logo from "../components/svg/footerLogo.svg";
-import { IoBarChartOutline } from "react-icons/io5";
+import { IoBarChartOutline, IoMenu } from "react-icons/io5";
 import { FaListAlt } from "react-icons/fa";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { AiFillFileAdd } from "react-icons/ai";
 import { MdManageAccounts } from "react-icons/md";
 import { GrDocumentTime } from "react-icons/gr";
 import Swal from "sweetalert2";
-
-
+import { Button } from "../components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "../components/ui/sheet";
+import { GoBell, GoPlusCircle } from "react-icons/go";
+import PrimaryButton from "../common/PrimaryButton";
+import { FcBusinessman } from "react-icons/fc";
 
 export default function DashboardLayouts() {
-
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
-
     Swal.fire({
       title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      text: "You will be logged out!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#FEC100",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, Log Out!",
-      iconColor: '#FEC100'
+      iconColor: "#FEC100",
     }).then((result) => {
       if (result.isConfirmed) {
-
-        navigate('/auth/log-in')
-
+        navigate("/auth/log-in");
         Swal.fire({
-          title: "Log out!",
-          text: "Log out successfully",
+          title: "Logged Out!",
+          text: "You have been logged out successfully.",
           icon: "success",
-          iconColor: '#FEC100',
+          iconColor: "#FEC100",
         });
       }
-    })
-  }
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setIsDrawerOpen((prev) => !prev);
+    });
   };
 
-  const closeDrawer = () => {
-    setIsDrawerOpen(false);
+  const getPageTitle = () => {
+    if (location.pathname === "/dashboard") return "Overview";
+    if (location.pathname.includes("add-new-product")) return "Add New Listing";
+    if (location.pathname.includes("manage-listings")) return "Manage Listings";
+    if (location.pathname.includes("order")) return "Order List";
+    if (location.pathname.includes("accounts")) return "Account Settings";
+    return "Dashboard";
   };
 
-  return (
-    <div className=" min-h-screen h-full">
-        <ScrollRestoration />
+  // Sidebar links
+  const SidebarContent = () => (
+    <div className="flex flex-col justify-between h-full py-5">
+      <ul className="space-y-2 font-medium">
+        <Link to="/" className="flex items-center mb-6 px-6 gap-2">
+          <img src={logo} alt="Logo" className="h-8 w-auto" />
+          <span className="text-2xl text-white font-semibold">Resolaring</span>
+        </Link>
 
-      {/* ---   nav ber   --- */}
+        <li>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              }`
+            }
+            end
+          >
+            <IoBarChartOutline className="text-xl" /> Overview
+          </NavLink>
+        </li>
 
-      <nav className="sticky top-0 z-50 w-fit ">
-        <div className="px-3 py-3 lg:px-5 lg:pl-3">
-          <div className="flex items-center justify-between ">
-            <div className="flex items-center justify-start rtl:justify-end">
-              {/*  drawer Toggle Btn */}
-              <button
-                onClick={toggleDrawer}
-                type="button"
-                className="inline-flex  p-2   lg:hidden  cursor-pointer bg-primary focus:outline-none focus:ring-2 relative w-10 h-10 justify-center items-center"
-              >
-                {/* hamburger icon */}
-                <svg
-                  className={`absolute w-6 text-secondary h-6 transition-all duration-300 ${isDrawerOpen
-                    ? "opacity-0 scale-75 rotate-45"
-                    : "opacity-100 scale-100 rotate-0"
-                    }`}
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+        <li>
+          <NavLink
+            to="/dashboard/add-new-product"
+            className={({ isActive }) =>
+              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              }`
+            }
+            end
+          >
+            <AiFillFileAdd className="text-xl" /> Add New Listing
+          </NavLink>
+        </li>
 
-                <svg
-                  className={`absolute w-6 h-6 text-secondary transition-all duration-300 ${isDrawerOpen
-                    ? "opacity-100 scale-100 rotate-0"
-                    : "opacity-0 scale-75 rotate-45"
-                    }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+        <li>
+          <NavLink
+            to="/dashboard/manage-listings"
+            className={({ isActive }) =>
+              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              }`
+            }
+            end
+          >
+            <FaListAlt className="text-xl" /> Manage Listings
+          </NavLink>
+        </li>
 
-      {/* ---   drawer   --- */}
+        <li>
+          <NavLink
+            to="/dashboard/order"
+            className={({ isActive }) =>
+              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              }`
+            }
+            end
+          >
+            <GrDocumentTime className="text-xl" /> Order List
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/dashboard/accounts"
+            className={({ isActive }) =>
+              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              }`
+            }
+            end
+          >
+            <MdManageAccounts className="text-xl" /> Account Settings
+          </NavLink>
+        </li>
+      </ul>
+
       <div
-        className={`fixed top-0 left-0 z-40 w-64 h-screen lg:pt-5 pt-15 transition-transform duration-300 bg-primary border-r border-primary 
-        ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"} 
-        lg:translate-x-0`}
+        onClick={handleLogout}
+        className=" mb-6 cursor-pointer hover:bg-accent duration-300 ease-in-out py-3 px-4 text-white  flex gap-2 items-center"
       >
-        <div className="h-full pb-4  overflow-y-auto bg-primary flex flex-col justify-between">
-
-          <ul className="space-y-2  font-medium">
-
-            <Link
-              to="/"
-            >
-              <div
-                className={`flex items-center mb-6 px-4  w-fit  p-2 gap-2 
-      
-                     `}>
-                <img src={logo} alt="Resolaring Logo" className="h-8 w-auto" />
-                <span className="text-2xl text-white font-semibold">Resolaring</span>
-              </div>
-            </Link>
-
-            {/* user dash link */}
-
-            <li>
-              <NavLink
-                to="/dashboard"
-                onClick={closeDrawer}
-                className={({ isActive }) =>
-                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
-                }
-                end
-              >
-                <IoBarChartOutline className="text-xl" /> Overview
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
-                to="/dashboard/add-new-product"
-                onClick={closeDrawer}
-                className={({ isActive }) =>
-                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
-                }
-                end
-              >
-                <AiFillFileAdd className="text-xl" /> Add New Listing
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/dashboard/manage-listings"
-                onClick={closeDrawer}
-                className={({ isActive }) =>
-                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
-                }
-                end
-              >
-                <FaListAlt className="text-xl" /> Manage Listings
-              </NavLink>
-            </li>
-
-
-            <li>
-              <NavLink
-                to="/dashboard/order"
-                onClick={closeDrawer}
-                className={({ isActive }) =>
-                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
-                }
-                end
-              >
-                <GrDocumentTime className="text-xl" /> Order List
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
-                to="/dashboard/accounts"
-                onClick={closeDrawer}
-                className={({ isActive }) =>
-                  `flex items-center gap-2 p-2 text-white ms-3 group ${isActive ? "bg-accent" : "hover:bg-accent duration-300 ease-in-out"}`
-                }
-                end
-              >
-                <MdManageAccounts size={25} className="text-xl" /> Account Settings
-              </NavLink>
-            </li>
-
-          </ul>
-
-          {/* ✅ Bottom Back Button */}
-          <div onClick={handleLogout} className="mb-6 mx-auto cursor-pointer w-full px-6 hover:bg-accent duration-300 ease-in-out py-3  text-white">
-            {/* <Link onClick={closeDrawer} to="/auth/log-in"> */}
-            <button className="flex gap-2 cursor-pointer items-center">
-              <RiLogoutBoxRLine size={25} />
-              Log out
-            </button>
-            {/* </Link> */}
-          </div>
-        </div>
-      </div>
-
-      {/* outlet */}
-      <div className="p-4 pt-0 z-60 lg:ml-54">
-        <Outlet />
+        <RiLogoutBoxRLine size={22} />
+        Log out
       </div>
     </div>
   );
+
+  return (
+
+    <div className="w-[100%] flex h-screen" >
+      {/* Sidebar */}
+      <div className="bg-primary w-[300px] hidden xl:block h-screen ">
+        <SidebarContent />
+      </div>
+
+      <main className="flex-1 lg:w-[calc(100%-300px)]  flex flex-col overflow-y-hidden">
+        {/* top bar */}
+        <header className="sticky top-0 z-30  bg-white border-b shadow-sm flex justify-between items-center px-6 py-6">
+          <h2 className="text-xl font-semibold text-gray-800">
+            {getPageTitle()}
+          </h2>
+          <div className="flex items-center gap-2">
+            <div className='flex   items-center lg:items-center gap-3' >
+                                  <input placeholder='Search for product' className=' px-4 py-2 hidden xl:block lg:w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
+                                  <PrimaryButton className=' hidden md:flex w-fit' icon={GoPlusCircle} >
+                                      Add Product
+                                  </PrimaryButton>
+                                  <GoBell size={25} />
+                  
+                                  <div className='flex items-center gap-2' >
+                                      <div className='p-2 rounded-full w-fit bg-gray-200' ><FcBusinessman size={30} /></div>
+                                      <span>
+                                          <h6 className='font-bold' >John kal</h6>
+                                          <p className='text-gray-400' >Seller</p>
+                                      </span>
+                                  </div>
+                              </div>
+
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                    
+                className="xl:hidden hover:bg-secondary cursor-pointer  bg-white rounded-none "
+              >
+                <IoMenu color="black" size={30} />
+              </Button>
+            </SheetTrigger>
+
+            <SheetContent
+              side="left"
+              className="p-0 w-[280px] bg-primary border-none text-white"
+            >
+              <SidebarContent />
+             
+            </SheetContent>
+          </Sheet>
+          </div>         
+
+        </header>
+        {/*  content */}
+        <section className="flex-1 h- overflow-y-auto p-6">
+          <Outlet />
+        </section>
+      </main>
+
+    </div>
+
+  );
 }
+

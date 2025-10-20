@@ -171,7 +171,7 @@ const OverTable = () => {
     <div >
       <h2 className="text-2xl font-semibold mb-4">Order History</h2>
       <div className="overflow-x-auto rounded-lg  border-gray-100 ">
-        <table className="min-w-full text-left text-sm">
+        <table className="min-w-[800px] w-full text-left text-sm">
           <thead className="bg-slate-900 text-white">
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>

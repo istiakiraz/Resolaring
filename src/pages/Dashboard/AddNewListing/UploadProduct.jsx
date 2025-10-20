@@ -17,29 +17,13 @@ import { FcBusinessman } from 'react-icons/fc';
 export default function UploadProduct() {
 
   return (
-    <div className="md:w-11/12 -mt-14 mx-auto">
+    <div className="-mt-5 mx-auto">
 
 
- {/* top bar */}
-        <nav className='flex sticky top-0 bg-white py-5  items-center justify-end gap-5  lg:justify-between' >
-            <h2 className='md:text-2xl text-xl lg:text-3xl mb-2 lg:mb-0 font-bold' >Add New Listing</h2>
-            <div className='flex  items-center gap-3' >
-                
-                <GoBell size={25} />
-
-                <div className='flex items-center gap-2' >
-                    <div className='p-2 rounded-full w-fit bg-gray-200' ><FcBusinessman size={30} /></div>
-                    <span>
-                        <h6 className='font-bold' >John kal</h6>
-                        <p className='text-gray-400' >Seller</p>
-                    </span>
-                </div>
-            </div>
-        </nav>
+ 
 
 
-
-      {/* Upload Media */}
+    
       <section className="py-10">
         <h2 className="font-semibold text-lg mb-3">Upload Media</h2>
 
