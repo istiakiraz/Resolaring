@@ -67,7 +67,7 @@ export default function CartContent() {
 
         {/* left side  */}
         <div className="md:col-span-2">
-          <table className="w-full border-collapse">
+          <table className="w-full   border-collapse">
             <thead>
               <tr className="text-left text-gray-600 border-b">
                 <th className="pb-3">My Cart</th>

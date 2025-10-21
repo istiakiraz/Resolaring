@@ -33,7 +33,7 @@ export default function Navbar() {
         <Link to="/" className="flex flex-col items-start space-y-2">
           <div className="flex items-center gap-2">
             <img src={logo} alt="Resolaring Logo" className="2xl:h-10 h-8 w-auto" />
-            <span className="2xl:text-4xl text-3xl font-semibold text-gray-900">
+            <span className="2xl:text-4xl text-2xl md:text-3xl font-semibold text-gray-900">
               Resolaring
             </span>
           </div>

@@ -152,7 +152,7 @@ export default function ManageListings() {
          <div className='py-10' >
               <h2 className="text-2xl font-semibold mb-4">Listings</h2>
               <div className="overflow-x-auto rounded-lg ">
-                <table className="min-w-full text-left text-sm">
+                <table className="min-w-[800px] w-full text-left text-sm">
                   <thead className="bg-slate-900 text-white">
                     {table.getHeaderGroups().map((headerGroup) => (
                       <tr key={headerGroup.id}>

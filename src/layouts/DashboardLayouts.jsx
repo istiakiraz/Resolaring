@@ -156,37 +156,41 @@ export default function DashboardLayouts() {
 
       <main className="flex-1 lg:w-[calc(100%-300px)]  flex flex-col overflow-y-hidden">
         {/* top bar */}
-        <header className="sticky top-0 z-30  bg-white border-b shadow-sm flex justify-between items-center px-6 py-6">
-          <h2 className="text-xl font-semibold text-gray-800">
+        <header className="sticky top-0 z-30  bg-white border-b shadow-sm flex justify-between items-center px-6 py-4 md:py-5">
+          <h2 className="text-[16px] md:text-xl lg:text-2xl font-semibold text-gray-800">
             {getPageTitle()}
           </h2>
           <div className="flex items-center gap-2">
-            <div className='flex   items-center lg:items-center gap-3' >
+            <div className='flex   items-center lg:items-center gap-3 ' >
                                   <input placeholder='Search for product' className=' px-4 py-2 hidden xl:block lg:w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
                                   <PrimaryButton className=' hidden md:flex w-fit' icon={GoPlusCircle} >
                                       Add Product
                                   </PrimaryButton>
-                                  <GoBell size={25} />
+                                  <GoBell   className="size-5 md:size-6"  />
                   
                                   <div className='flex items-center gap-2' >
-                                      <div className='p-2 rounded-full w-fit bg-gray-200' ><FcBusinessman size={30} /></div>
-                                      <span>
-                                          <h6 className='font-bold' >John kal</h6>
-                                          <p className='text-gray-400' >Seller</p>
-                                      </span>
+                                      <div className='p-2 rounded-full w-fit  bg-gray-200' ><span className="size-4 md:size-8"><FcBusinessman  /></span></div>
+                                      <div className="hidden md:block">
+                                          <h6 className='font-bold text-sm md:text-xl' >John kal</h6>
+                                          <p className='text-gray-400 text-[12px] md:text-sm ' >Seller</p>
+                                      </div>
                                   </div>
                               </div>
 
 
           <Sheet>
-            <SheetTrigger asChild>
+          
+             <SheetTrigger className='p-0 md:ml-5 !px-0' asChild>
               <Button
                     
-                className="xl:hidden hover:bg-secondary cursor-pointer  bg-white rounded-none "
+                className="xl:hidden hover:bg-secondary p-0 cursor-pointer  bg-white rounded-none "
               >
-                <IoMenu color="black" size={30} />
+                <IoMenu className="!size-7" color="black" size={24} />
               </Button>
             </SheetTrigger>
+
+         
+         
 
             <SheetContent
               side="left"

@@ -23,7 +23,7 @@ export default function Hero() {
           Empowering Sustainability 
           Through Solar Recycling
         </h1>
-        <p className="text-lg md:text-xl mb-6 text-gray-200">
+        <p className=" md:text-xl mb-6 text-gray-200">
           Buy and sell quality second-hand solar equipment to save money,
           reduce waste, and promote a greener future.
         </p>

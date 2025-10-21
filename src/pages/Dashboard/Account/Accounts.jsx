@@ -38,7 +38,7 @@ export default function Accounts() {
     
                            <div className="flex justify-between py-10 items-center mb-6">
                                <h2 className="text-2xl lg:text-3xl font-semibold">Account</h2>
-                               <div className="space-x-3">
+                               <div className="space-x-3 flex flex-col md:flex-row gap-2 items-center">
                                    <Button className='cursor-pointer hover:text-white rounded-full duration-300 ease-in-out' variant="outline">Discard</Button>
                                    <Button className="bg-[#b45c3d] cursor-pointer rounded-full duration-300 ease-in-out hover:bg-[#6c3825] text-white">
                                        Update Info
