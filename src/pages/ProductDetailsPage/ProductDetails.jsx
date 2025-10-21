@@ -72,7 +72,7 @@ export default function ProductDetails() {
               <option>03</option>
             </select>
           </div>
-          <PrimaryButton className='w-fit px-40' icon={FaArrowRightLong}>
+          <PrimaryButton className='w-full place-content-center ' icon={FaArrowRightLong}>
             Add to Cart
           </PrimaryButton>
 
