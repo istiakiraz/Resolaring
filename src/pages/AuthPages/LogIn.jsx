@@ -54,9 +54,7 @@ export default function LogIn() {
                             name="email"
                         />
 
-                        {/* {errors.email?.type === "required" && (
-                            <p className="text-red-700">Email is required</p>
-                        )} */}
+                   
 
                     </div>
 
@@ -80,9 +78,7 @@ export default function LogIn() {
                             name="password"
                         />
 
-                        {/* {errors.password?.type === "required" && (
-                            <p className="text-red-700">password is required</p>
-                        )} */}
+                    
 
                         {/* remember */}
                         <div className="flex items-center mt-4 justify-between">

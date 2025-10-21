@@ -6,7 +6,7 @@ import { FaApple } from 'react-icons/fa6';
 export default function SocialLog() {
   return (
     <div className='flex flex-col justify-center' >
-        <div className='flex items-center  w-50 gap-2 '>
+        <div className='flex items-center place-content-center mx-auto w-6/12 gap-2 '>
             <Separator /> Or <Separator />
         </div>
 
