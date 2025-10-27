@@ -28,11 +28,14 @@ export default function Navbar() {
   return (
     <header className="w-full bg-white">
       <div className="2xl:max-w-9/12 max-w-11/12 mx-auto py-6 flex justify-between items-center">
-
         {/* logo */}
         <Link to="/" className="flex flex-col items-start space-y-2">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Resolaring Logo" className="2xl:h-10 h-8 w-auto" />
+            <img
+              src={logo}
+              alt="Resolaring Logo"
+              className="2xl:h-10 h-8 w-auto"
+            />
             <span className="2xl:text-4xl text-2xl md:text-3xl font-semibold text-gray-900">
               Resolaring
             </span>
@@ -49,7 +52,11 @@ export default function Navbar() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `text-sm ${isActive ? "text-black font-medium" : "text-gray-600 hover:text-black"}`
+                `text-sm ${
+                  isActive
+                    ? "text-black font-medium"
+                    : "text-gray-600 hover:text-black"
+                }`
               }
             >
               {link.label}
@@ -72,7 +79,11 @@ export default function Navbar() {
             key={"/book"}
             to={"/book"}
             className={({ isActive }) =>
-              `text-sm ${isActive ? "text-black font-medium" : "text-gray-600 hover:text-black"}`
+              `text-sm ${
+                isActive
+                  ? "text-black font-medium"
+                  : "text-gray-600 hover:text-black"
+              }`
             }
           >
             Book Online
@@ -89,7 +100,6 @@ export default function Navbar() {
 
           <DrawerContent className="h-full w-3/4 sm:w-1/2 bg-white fixed left-0 top-0  rounded-none">
             <DrawerHeader className="flex items-end justify-end ">
-    
               <DrawerClose asChild>
                 <button className="text-gray-700  p-2">
                   <X className="h-5 w-5" />
@@ -98,38 +108,37 @@ export default function Navbar() {
             </DrawerHeader>
 
             <nav className="flex flex-col justify-between  h-full">
-              
-             <div className="flex flex-col p-5 pt-0 space-y-4">
-               {navLinks.map((link) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
+              <div className="flex flex-col p-5 pt-0 space-y-4">
+                {navLinks.map((link) => (
+                  <NavLink
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setOpen(false)}
+                    className="text-sm text-gray-700 hover:text-black"
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
+              </div>
+
+              <div className="flex flex-col p-5 pt-0 space-y-4">
+                <Link
+                  to="/account-settings"
                   onClick={() => setOpen(false)}
-                  className="text-sm text-gray-700 hover:text-black"
+                  className="bg-yellow-400 text-black text-sm duration-75 px-4 py-2 rounded-full font-medium hover:bg-yellow-500 transition text-center"
                 >
-                  {link.label}
-                </NavLink>
-              ))}
-             </div>
+                  Become a Seller →
+                </Link>
 
-           <div className="flex flex-col p-5 pt-0 space-y-4" >
-               <Link
-                to="/account-settings"
-                onClick={() => setOpen(false)}
-                className="bg-yellow-400 text-black text-sm duration-75 px-4 py-2 rounded-full font-medium hover:bg-yellow-500 transition text-center"
-              >
-                Become a Seller →
-              </Link>
-
-              <Link
-                to="/auth/log-in"
-                onClick={() => setOpen(false)}
-                className="flex items-center justify-center border border-gray-300 px-3 py-2 rounded-full text-sm hover:bg-gray-100 transition"
-              >
-                <LogIn className="h-4 w-4 mr-1" />
-                Login
-              </Link>
-           </div>
+                <Link
+                  to="/auth/log-in"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center justify-center border border-gray-300 px-3 py-2 rounded-full text-sm hover:bg-gray-100 transition"
+                >
+                  <LogIn className="h-4 w-4 mr-1" />
+                  Login
+                </Link>
+              </div>
             </nav>
           </DrawerContent>
         </Drawer>

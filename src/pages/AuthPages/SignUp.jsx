@@ -75,7 +75,7 @@ export default function SignUp() {
                             placeholder="Password"
                             {...register("password1", { required: true, pattern: /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/ })}
                             type={showPass ? "text" : "password"}
-                            // className="pl-10 flex-grow w-full h-12 px-4 transition duration-200 bg-gray-100 border border-gray-300 rounded-xl appearance-none focus:border-deep-purple-accent-400 focus:outline-secondary focus:shadow-outline"
+                            
                             className={`pl-10 flex-grow w-full h-12 px-4 transition duration-200 bg-gray-100 border rounded-xl appearance-none
             ${errors.password1 ? "border-red-500 focus:border-red-500" : "border-gray-300 focus:border-deep-purple-accent-400"}
             focus:outline-secondary focus:shadow-outline`}

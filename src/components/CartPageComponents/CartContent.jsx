@@ -6,6 +6,11 @@ import { Input } from "@/components/ui/input";
 import { FcGoogle } from "react-icons/fc";
 import { CiShoppingTag } from "react-icons/ci";
 import { Link } from "react-router";
+import {
+  useReactTable,
+  getCoreRowModel,
+  flexRender,
+} from "@tanstack/react-table";
 
 
 export default function CartContent() {
@@ -60,6 +65,44 @@ export default function CartContent() {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+
+  // const columns = [
+  //   {
+  //     header: 'My Cart',
+  //     accessorKey: 'title',
+  //     cell: ({ row }) => (
+  //       <div className="flex items-center gap-2">
+  //         <img
+  //           src={row.original.image}
+  //           alt="image"
+  //           className="w-16 h-16 rounded-md object-cover"
+  //         />
+  //         <span>{row.original.title}</span>
+  //       </div>
+  //     ),
+  //   }, 
+  //   {
+  //     header: 'Price',
+  //     accessorKey: 'price'
+  //   },
+  //   {
+  //     header: 'Quantity',
+  //     accessorKey: 'quantity',
+  //     cell: ({row})=> (
+  //       <div>
+  //          <button
+  //                       onClick={() => handleDecrease(row.item.id)}
+  //                       className="p-1 border rounded-full hover:bg-gray-100"
+  //                     >
+  //                       <FaMinus size={10} />
+  //                     </button>
+
+  //       </div>
+  //     )
+  //   },
+
+
+  // ]
 
   return (
     <div className="max-w-11/12 2xl:max-w-9/12 mx-auto py-20 md:px-8">

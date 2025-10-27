@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Link,
-  NavLink,
-  Outlet,
-  useLocation,
-  useNavigate,
-} from "react-router";
+import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router";
 import logo from "../components/svg/footerLogo.svg";
 import { IoBarChartOutline, IoMenu } from "react-icons/io5";
 import { FaListAlt } from "react-icons/fa";
@@ -74,7 +68,8 @@ export default function DashboardLayouts() {
           <NavLink
             to="/dashboard"
             className={({ isActive }) =>
-              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              `flex items-center gap-2 p-2 text-white ms-3  ${
+                isActive ? "bg-accent" : "hover:bg-accent duration-300"
               }`
             }
             end
@@ -87,7 +82,8 @@ export default function DashboardLayouts() {
           <NavLink
             to="/dashboard/add-new-product"
             className={({ isActive }) =>
-              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              `flex items-center gap-2 p-2 text-white ms-3  ${
+                isActive ? "bg-accent" : "hover:bg-accent duration-300"
               }`
             }
             end
@@ -100,7 +96,8 @@ export default function DashboardLayouts() {
           <NavLink
             to="/dashboard/manage-listings"
             className={({ isActive }) =>
-              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              `flex items-center gap-2 p-2 text-white ms-3  ${
+                isActive ? "bg-accent" : "hover:bg-accent duration-300"
               }`
             }
             end
@@ -113,7 +110,8 @@ export default function DashboardLayouts() {
           <NavLink
             to="/dashboard/order"
             className={({ isActive }) =>
-              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              `flex items-center gap-2 p-2 text-white ms-3  ${
+                isActive ? "bg-accent" : "hover:bg-accent duration-300"
               }`
             }
             end
@@ -126,7 +124,8 @@ export default function DashboardLayouts() {
           <NavLink
             to="/dashboard/accounts"
             className={({ isActive }) =>
-              `flex items-center gap-2 p-2 text-white ms-3  ${isActive ? "bg-accent" : "hover:bg-accent duration-300"
+              `flex items-center gap-2 p-2 text-white ms-3  ${
+                isActive ? "bg-accent" : "hover:bg-accent duration-300"
               }`
             }
             end
@@ -147,8 +146,7 @@ export default function DashboardLayouts() {
   );
 
   return (
-
-    <div className="w-[100%] flex h-screen" >
+    <div className="w-[100%] flex h-screen">
       {/* Sidebar */}
       <div className="bg-primary w-[300px] hidden xl:block h-screen ">
         <SidebarContent />
@@ -161,56 +159,58 @@ export default function DashboardLayouts() {
             {getPageTitle()}
           </h2>
           <div className="flex items-center gap-2">
-            <div className='flex   items-center lg:items-center gap-3 ' >
-                                  <input placeholder='Search for product' className=' px-4 py-2 hidden xl:block lg:w-96 rounded-full border bg-gray-100 border-gray-200' type="text" name="" id="" />
-                                  <PrimaryButton className=' hidden md:flex w-fit' icon={GoPlusCircle} >
-                                      Add Product
-                                  </PrimaryButton>
-                                  <GoBell   className="size-5 md:size-6"  />
-                  
-                                  <div className='flex items-center gap-2' >
-                                      <div className='p-2 rounded-full w-fit  bg-gray-200' ><span className="size-4 md:size-8"><FcBusinessman  /></span></div>
-                                      <div className="hidden md:block">
-                                          <h6 className='font-bold text-sm md:text-xl' >John kal</h6>
-                                          <p className='text-gray-400 text-[12px] md:text-sm ' >Seller</p>
-                                      </div>
-                                  </div>
-                              </div>
-
-
-          <Sheet>
-          
-             <SheetTrigger className='p-0 md:ml-5 !px-0' asChild>
-              <Button
-                    
-                className="xl:hidden hover:bg-secondary p-0 cursor-pointer  bg-white rounded-none "
+            <div className="flex   items-center lg:items-center gap-3 ">
+              <input
+                placeholder="Search for product"
+                className=" px-4 py-2 hidden xl:block lg:w-96 rounded-full border bg-gray-100 border-gray-200"
+                type="text"
+                name=""
+                id=""
+              />
+              <PrimaryButton
+                className=" hidden md:flex w-fit"
+                icon={GoPlusCircle}
               >
-                <IoMenu className="!size-7" color="black" size={24} />
-              </Button>
-            </SheetTrigger>
+                Add Product
+              </PrimaryButton>
+              <GoBell className="size-5 md:size-6" />
 
-         
-         
+              <div className="flex items-center gap-2">
+                <div className="p-2 rounded-full w-fit  bg-gray-200">
+                  <span className="size-4 md:size-8">
+                    <FcBusinessman />
+                  </span>
+                </div>
+                <div className="hidden md:block">
+                  <h6 className="font-bold text-sm md:text-xl">John kal</h6>
+                  <p className="text-gray-400 text-[12px] md:text-sm ">
+                    Seller
+                  </p>
+                </div>
+              </div>
+            </div>
 
-            <SheetContent
-              side="left"
-              className="p-0 w-[280px] bg-primary border-none text-white"
-            >
-              <SidebarContent />
-             
-            </SheetContent>
-          </Sheet>
-          </div>         
+            <Sheet>
+              <SheetTrigger className="p-0 md:ml-5 !px-0" asChild>
+                <Button className="xl:hidden hover:bg-secondary p-0 cursor-pointer  bg-white rounded-none ">
+                  <IoMenu className="!size-7" color="black" size={24} />
+                </Button>
+              </SheetTrigger>
 
+              <SheetContent
+                side="left"
+                className="p-0 w-[280px] bg-primary border-none text-white"
+              >
+                <SidebarContent />
+              </SheetContent>
+            </Sheet>
+          </div>
         </header>
         {/*  content */}
         <section className="flex-1 h- overflow-y-auto p-6">
           <Outlet />
         </section>
       </main>
-
     </div>
-
   );
 }
-

@@ -10,52 +10,38 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import PrimaryButton from '../../../common/PrimaryButton'
+import PrimaryButton from "../../../common/PrimaryButton";
 import { GoBell, GoPlusCircle } from "react-icons/go";
-import { FcBusinessman } from 'react-icons/fc';
+import { FcBusinessman } from "react-icons/fc";
 
 export default function UploadProduct() {
-
   return (
     <div className="-mt-5 mx-auto">
-
-
- 
-
-
-    
       <section className="py-10">
         <h2 className="font-semibold text-lg mb-3">Upload Media</h2>
 
-  <div
-      className="border-2 border-dashed rounded-lg p-8 flex flex-col items-center justify-center text-center bg-gray-50"
-    >
-      {/* Hidden file input */}
-      <input
-        type="file"
-        id="file-upload"
-        multiple
-        accept="image/*"
-        className="hidden"
-        
-      />
+        <div className="border-2 border-dashed rounded-lg p-8 flex flex-col items-center justify-center text-center bg-gray-50">
+          {/* Hidden file input */}
+          <input
+            type="file"
+            id="file-upload"
+            multiple
+            accept="image/*"
+            className="hidden"
+          />
 
-      
-      <label htmlFor="file-upload">
-        <Button
-          type="button"
-          className="bg-accent rounded-full cursor-pointer text-white"
-          asChild={false}
-        >
-          Select Photos
-        </Button>
-      </label>
+          <label htmlFor="file-upload">
+            <Button
+              type="button"
+              className="bg-accent rounded-full cursor-pointer text-white"
+              asChild={false}
+            >
+              Select Photos
+            </Button>
+          </label>
 
-      <p className="text-gray-500 text-sm mt-2">or drag photos here</p>
-
-      
-    </div>
-
+          <p className="text-gray-500 text-sm mt-2">or drag photos here</p>
+        </div>
       </section>
 
       {/* Description */}
@@ -64,22 +50,26 @@ export default function UploadProduct() {
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">Title:</label>
-            <Input className='bg-gray-100 h-12' placeholder="Choose" />
+            <Input className="bg-gray-100 h-12" placeholder="Choose" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">
               Description:
             </label>
-            <Textarea className='bg-gray-100 h-20' placeholder="Choose" rows={4} />
+            <Textarea
+              className="bg-gray-100 h-20"
+              placeholder="Choose"
+              rows={4}
+            />
           </div>
 
           <div className="grid md:grid-cols-3 mb-4 gap-4">
-            <div >
+            <div>
               <label className="block text-sm font-medium mb-1">
                 Brand Name
               </label>
-              <Select >
-                <SelectTrigger className='min-w-full bg-gray-100' >
+              <Select>
+                <SelectTrigger className="min-w-full bg-gray-100">
                   <SelectValue placeholder="Choose" />
                 </SelectTrigger>
                 <SelectContent>
@@ -102,7 +92,7 @@ export default function UploadProduct() {
                 Condition
               </label>
               <Select>
-                <SelectTrigger className='min-w-full bg-gray-100'>
+                <SelectTrigger className="min-w-full bg-gray-100">
                   <SelectValue placeholder="Choose" />
                 </SelectTrigger>
                 <SelectContent>
@@ -121,24 +111,25 @@ export default function UploadProduct() {
         <div className="grid md:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-medium mb-1">Price:</label>
-            <Input className='bg-gray-100 h-12' placeholder="Price" />
+            <Input className="bg-gray-100 h-12" placeholder="Price" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">
-              Discounts: <span className="text-gray-400 text-xs">(Optional)</span>
+              Discounts:{" "}
+              <span className="text-gray-400 text-xs">(Optional)</span>
             </label>
-            <Input className='bg-gray-100 h-12' placeholder="Price" />
+            <Input className="bg-gray-100 h-12" placeholder="Price" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">
               Discount percentage
             </label>
-            <Input className='bg-gray-100 h-12' placeholder="%" />
+            <Input className="bg-gray-100 h-12" placeholder="%" />
           </div>
         </div>
       </section>
 
-      {/* Category Selection */}
+      {/* category  */}
       <section>
         <h2 className="font-semibold text-lg my-6">Category Selection</h2>
         <div>
@@ -146,7 +137,7 @@ export default function UploadProduct() {
             Categorize products:
           </label>
           <Select>
-            <SelectTrigger className='w-full min-h-12 bg-gray-100'>
+            <SelectTrigger className="w-full min-h-12 bg-gray-100">
               <SelectValue placeholder="Choose" />
             </SelectTrigger>
             <SelectContent>
