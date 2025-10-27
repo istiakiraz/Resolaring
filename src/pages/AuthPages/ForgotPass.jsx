@@ -19,7 +19,7 @@ export default function ForgotPass() {
   };
   return (
     <div className="space-y-3 w-full  items-center">
-      <h1 className="lg:text-5xl text-3xl mb-2 font-semibold">Verify Email on</h1>
+      <h1 className="lg:text-5xl text-3xl mb-2 font-semibold">Verify Email</h1>
 
       <form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-1 sm:mb-2">
