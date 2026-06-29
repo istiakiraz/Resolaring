@@ -15,7 +15,7 @@ export default function Cta() {
             <p className='lg:text-2xl w-11/12' >Sign up now and start contributing to a greener future.</p>
 
             <div className='flex gap-5 flex-col md:flex-row w-11/12 mx-auto items-center justify-center mt-6'>
-                <PrimaryButton to="/seller" icon={FaArrowRightLong} className='w-fit' >Become a Seller</PrimaryButton>
+                <PrimaryButton to="/account-settings" icon={FaArrowRightLong} className='w-fit' >Become a Seller</PrimaryButton>
                 <SecondaryButton className='w-fit border-2 '>Explore the Marketplace</SecondaryButton>
             </div>
             </div>

@@ -61,7 +61,7 @@ export default function Work() {
 
             </div>
 
-            <PrimaryButton to="/sell" icon={FaArrowRightLong} className='w-fit mt-6 px-8' >
+            <PrimaryButton to="/account-settings" icon={FaArrowRightLong} className='w-fit mt-6 px-8' >
                 Start Selling Today
             </PrimaryButton>
 
