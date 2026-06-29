@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImg from '../../assets/Img/HeroImg.svg'
+import heroImg from '../../assets/Img/HeroImg.png'
 import PrimaryButton from "../../common/PrimaryButton";
 import { FaArrowRightLong } from "react-icons/fa6";
 import SecondaryButton from "../../common/SecondaryButton";

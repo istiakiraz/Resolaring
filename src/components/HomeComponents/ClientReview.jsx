@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bgImg from "../svg/reviewBgImg.svg";
+import bgImg from "../svg/reviewBgImg.png";
 import {
   Carousel,
   CarouselContent,

@@ -235,11 +235,11 @@ export default function Product({allProducts}) {
                         ))}
                     </div>
 
-                    <div className="flex justify-center">
+                    {/* <div className="flex justify-center">
                         <PrimaryButton to="/all-products" icon={FaArrowRightLong} className="w-fit mt-10 ">
                             View all products
                         </PrimaryButton>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
