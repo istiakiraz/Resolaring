@@ -1,5 +1,5 @@
 import React from 'react'
-import bgImg from '../svg/ctaBg.svg'
+import bgImg from '../svg/ctaBg.png'
 import PrimaryButton from '../../common/PrimaryButton'
 import SecondaryButton from '../../common/SecondaryButton'
 import { FaArrowRightLong } from 'react-icons/fa6'

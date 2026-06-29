@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import PrimaryButton from "../../common/PrimaryButton";
 import { FaArrowRightLong } from "react-icons/fa6";
-import bgImg from '../svg/CtaBg-product.svg'
+import bgImg from '../svg/CtaBg-product.png'
 import { Link } from "react-router";
 import {
   Drawer,

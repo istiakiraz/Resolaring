@@ -1,5 +1,5 @@
 import React from 'react'
-import coverImg from '../svg/bookpagecover.svg'
+import coverImg from '../svg/bookpagecover.png'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import PrimaryButton from '../../common/PrimaryButton'
 

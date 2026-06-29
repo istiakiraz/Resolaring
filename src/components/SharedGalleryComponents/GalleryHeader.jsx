@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaArrowRightLong } from 'react-icons/fa6'
-import coverImg from '../svg/GalleryCover.svg'
+import coverImg from '../svg/GalleryCover.png'
 import PrimaryButton from '../../common/PrimaryButton'
 
 export default function GalleryHeader() {
